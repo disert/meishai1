@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_lay_selector"
+        android:paddingBottom="@dimen/dis_25"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30"
+        android:paddingTop="@dimen/dis_25" >
+
+        <com.meishai.app.widget.RoundCornerImageView
+            android:id="@+id/topic_thumb_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/photoshow_topic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis_15"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/topic_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="长款加厚大衣"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_13" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/topic_user_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:text="发起人：美晒天使"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_10" />
+
+                <TextView
+                    android:id="@+id/topic_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:text="时间：一天前"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/text_size_10" />
+
+                <ImageButton
+                    android:id="@+id/topic_attention_ib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/topic_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:text="该话题暂无描述"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_size_10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+</LinearLayout>

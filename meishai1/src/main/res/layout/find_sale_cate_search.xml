@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_defaut"
+        style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/find_cate" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sale_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dis_10"
+        android:layout_marginRight="@dimen/dis_10"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/dis_20"
+        android:listSelector="#00000000"
+        android:numColumns="2"
+        android:paddingTop="@dimen/dis_20"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/dis_20"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="#000000"
+        ptr:ptrListViewExtrasEnabled="false"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrScrollingWhileRefreshingEnabled="true"
+        ptr:ptrShowIndicator="false" />
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/view_hor_match_line" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/disclose_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/disclose_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="店品名称"
+                    android:textSize="10sp"
+                    android:textColor="#555555" />
+
+                <EditText
+                    android:id="@+id/disclose_edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入商品名字"
+                    android:textColorHint="#999999"
+                    android:textSize="10sp" />
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="10sp"
+                    android:id="@+id/disclose_tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="购买地/链接"
+                    android:textColor="#555555" />
+
+                <EditText
+                    android:id="@+id/disclose_edit_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入购买地或购买链接"
+                    android:textColorHint="#999999"
+                    android:textSize="10sp" />
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/disclose_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="10sp"
+                    android:id="@+id/disclose_tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="实付价格"
+                    android:textColor="#555555" />
+
+                <EditText
+                    android:id="@+id/disclose_edit_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入实付价格"
+                    android:textColorHint="#999999"
+                    android:textSize="10sp" />
+
+            <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="10sp"
+                    android:id="@+id/disclose_tv_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="推荐理由"
+                    android:textColor="#555555" />
+
+                <EditText
+                    android:id="@+id/disclose_edit_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="left|top"
+                    android:hint="请输入推荐理由,越详细越好哦~"
+                    android:lineSpacingExtra="5dp"
+                    android:lines="5"
+                    android:textColorHint="#999999"
+                    android:textSize="10sp" />
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="购买凭证"
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:id="@+id/disclose_tv_proof"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:textColor="#999999"
+                        android:textSize="10sp"
+                        android:text="请上传购买凭证截图" />
+
+                    <View style="@style/view_hor_match_line" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/disclose_image_proof"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/add_image" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/disclose_tv_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="label"
+                    android:textSize="10sp"
+                    android:textColor="#999999" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <Button
+        android:id="@+id/disclose_btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FF5577"
+        android:text="提交"
+        android:textSize="14sp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

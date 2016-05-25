@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emoji="http://schemas.android.com/apk/res/com.meishai"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/popup_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lay_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hei_96"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:layout_marginRight="@dimen/dis_20"
+            android:background="@drawable/lay_corners_bg"
+            android:visibility="gone" >
+
+            <com.meishai.app.widget.horizontalscrollview.MyRecyclerView
+                android:id="@+id/recycle_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/hei_96"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/dis_15"
+                android:paddingRight="@dimen/dis_15"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:src="@drawable/ic_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/comment_back"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dis_24"
+                android:layout_marginTop="@dimen/dis_24"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ig_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis_30"
+                    android:layout_marginRight="@dimen/dis_30"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_emoji_comment" />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/ig_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_comment_upload" />
+                
+                <ImageButton
+                    android:id="@+id/close_keybord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_comment_upload" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dis_24"
+                android:layout_marginLeft="@dimen/dis_20"
+                android:layout_marginRight="@dimen/dis_20" >
+
+                <zhaohg.emojiview.EmojiEditText
+                    android:id="@+id/tv_comment"
+                    style="@style/find_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_70"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/dis_10"
+                    android:layout_toLeftOf="@+id/btn_publish"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawablePadding="@dimen/dis_20"
+                    android:focusable="true"
+                    android:hint="评论一下送积分"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_cccc"/>
+
+                <Button
+                    android:id="@+id/btn_publish"
+                    android:layout_width="@dimen/dis_120"
+                    android:layout_height="@dimen/dis_72"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_sign_point_selector"
+                    android:text="发表"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_30" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <zhaohg.emojiview.EmojiViewEx
+            android:id="@+id/emojiView"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#EEEEEE"
+            emoji:categoryHeight="40dp"
+            emoji:indicatorDotsColor="#222222" />
+
+        <LinearLayout
+            android:id="@+id/send_tool_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/add_tool"
+                layout="@layout/send_msg_tool"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

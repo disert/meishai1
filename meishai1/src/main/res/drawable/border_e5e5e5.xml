@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    <stroke android:width="0.5dp" android:color="#E5E5E5" />
+    <solid android:color="@android:color/white"/>
+    <!-- 上面那条线总是会离图片有点空白地带,估计是图片本身的问题,但是也必须得解决,下面为解决空白问题的-->
+    <!--<corners android:topLeftRadius="90dp" android:topRightRadius="90dp"/>-->
+</shape>

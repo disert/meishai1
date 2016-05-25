@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <com.meishai.app.widget.RoundCornerImageView
+            android:id="@+id/home_page_head_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_shape"
+            android:clickable="true"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/home_page_head_master"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/home_page_head_avatar"
+            android:layout_alignRight="@id/home_page_head_avatar"
+            android:src="@drawable/icon_master"/>
+
+        <RelativeLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_page_head_avatar">
+
+            <TextView
+                android:id="@+id/home_page_head_nicename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="xxx"
+                android:layout_centerVertical="true"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/home_page_head_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/home_page_head_nicename"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textColor="@android:color/white"
+                android:text="V1会员"
+                android:textSize="8sp"/>
+            <ImageView
+                android:id="@+id/home_page_head_attention"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_attention_yes"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_page_head_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_marginTop="@dimen/dis_10"
+            android:layout_toRightOf="@id/home_page_head_avatar"
+            android:paddingLeft="5dp"
+            android:text="zzz"
+            android:textColor="#999999"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="11sp"/>
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/home_page_head_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="5dp"
+        android:text="zzz"
+        android:lineSpacingExtra="8dp"
+        android:textColor="#999999"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/htl_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dis_15"
+        android:paddingRight="@dimen/dis_15" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_16" 
+            android:layout_marginBottom="@dimen/dis_16">
+
+            <TextView
+                android:id="@+id/htl_tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门话题1"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/htl_tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/tv_selector"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more_right_arrow"
+                android:text="更多1"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/view_hor_match_line"
+        android:id="@+id/line_center"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/htl_topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerPadding="0dp"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dis_16"
+            android:paddingTop="@dimen/dis_16" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View style="@style/view_hor_match_line" />
+
+    <LinearLayout
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            style="@style/view_place_transparent"
+            android:background="#eeeeee" />
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+</LinearLayout>

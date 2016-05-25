@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/lay_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+        <!--style="@style/lay_item_style"-->
+    <LinearLayout
+        android:id="@+id/lay_con"
+        android:background="@drawable/my_lay_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.meishai.app.widget.CircleNetWorkImageView
+            android:id="@+id/avatar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/avatar" >
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/lay_ct_msg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:maxWidth="120dip"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/lay_ct_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:maxWidth="180dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/content"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                android:textColor="#999999" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

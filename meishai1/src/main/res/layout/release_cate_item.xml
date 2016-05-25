@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.meishai.app.widget.CircleNetWorkImageView
+                android:id="@+id/image"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:src="@drawable/ic_add"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/text_24_666_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_10"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/color_333" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rigth_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#DDDDDD" />
+    </RelativeLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+</LinearLayout>

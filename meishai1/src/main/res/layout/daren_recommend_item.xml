@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dis_30"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <com.meishai.app.widget.RoundCornerImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="@dimen/dis_80"
+            android:layout_height="@dimen/dis_80"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_shape"
+            android:clickable="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/nicename_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis_10"
+            android:layout_marginTop="@dimen/dis_10"
+            android:layout_toRightOf="@id/avatar_iv"
+            android:text="xxx"
+            android:textColor="#555555"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nicename_tv"
+            android:layout_marginBottom="@dimen/dis_10"
+            android:layout_marginLeft="@dimen/dis_10"
+            android:layout_toRightOf="@id/avatar_iv"
+            android:text="zzz"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/attention_ib"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_attention_yes" />
+    </RelativeLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:id="@+id/image_edit_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <com.meishai.app.widget.layout.CaptureFrameLayout
+            android:id="@+id/image_edit_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" >
+
+            <ImageView
+                android:id="@+id/image_edit_image_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/place_default"
+                android:visibility="gone" />
+
+            <com.meishai.app.widget.layout.SingleTouchView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_edit_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:controlLocation="right_bottom"
+                app:deleteLocation="left_top"
+                app:framePadding="2dp"
+                app:src="@drawable/default_sticker" />
+        </com.meishai.app.widget.layout.CaptureFrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/image_edit_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout style="@style/image_edit_layout_style" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <ImageButton
+                android:id="@+id/image_edit_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_arrow_gray" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/image_edit_layout_style" >
+
+            <!-- 小箭头 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <View style="@style/view_hor_weight_line" />
+
+                <ImageView
+                    android:id="@+id/image_edit_tags_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/select_arrow" />
+
+                <View style="@style/view_hor_weight_line" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/image_edit_tags"
+                style="@style/image_edit_tag_style"
+                android:text="贴纸" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/image_edit_layout_style" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <View style="@style/view_hor_weight_line" />
+
+                <ImageView
+                    android:id="@+id/image_edit_filter_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/select_arrow" />
+
+                <View style="@style/view_hor_weight_line" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/image_edit_filter"
+                style="@style/image_edit_tag_style"
+                android:text="滤镜" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/image_edit_layout_style"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <View style="@style/view_hor_weight_line" />
+
+                <ImageView
+                    android:id="@+id/image_edit_label_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/select_arrow" />
+
+                <View style="@style/view_hor_weight_line" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/image_edit_label"
+                style="@style/image_edit_tag_style"
+                android:text="标签" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/image_edit_layout_style" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <ImageButton
+                android:id="@+id/image_edit_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_red_selector"
+                android:src="@drawable/confirm_select" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

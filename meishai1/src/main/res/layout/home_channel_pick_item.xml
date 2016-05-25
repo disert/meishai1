@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/thumb_niv"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="10dip"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/thumb_niv"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@id/thumb_niv"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@id/thumb_niv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#cccccc"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/operator_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip"
+        android:background="@null" />
+
+</RelativeLayout>

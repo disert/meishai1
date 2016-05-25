@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/content_bg_selector"
+    android:descendantFocusability="blocksDescendants" >
+
+    <com.meishai.net.volley.toolbox.NetworkImageView
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="0.5dp"
+        android:paddingRight="0.5dp"
+        android:paddingTop="0.5dp"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/lay_center"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/thumb"
+        android:paddingBottom="@dimen/dis_10"
+        android:paddingLeft="@dimen/dis_10"
+        android:paddingRight="@dimen/dis_10"
+        android:paddingTop="@dimen/dis_10" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis_15"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="韩版"
+            android:textColor="@color/master_username_color"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/snum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="限量 100份"
+                android:textColor="@color/master_username_color"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="价值 210元"
+                android:textColor="@color/master_username_color"
+                android:textSize="8sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/lay_center"
+        android:background="@drawable/gray_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dis_10"
+        android:paddingRight="@dimen/dis_10" >
+
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/icon_time"
+            android:drawablePadding="@dimen/dis_5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_cccc"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/appnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/icon_person"
+            android:drawablePadding="@dimen/dis_5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="780人申请"
+            android:textColor="@color/color_cccc"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:top_back_attr="http://schemas.android.com/apk/res/com.meishai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_search"
+        style="@style/top_titile_style"
+        android:paddingBottom="@dimen/dis_15"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30"
+        android:paddingTop="@dimen/dis_15" >
+
+        <com.meishai.app.widget.EditTextWithDel
+            android:id="@+id/search_text"
+            style="@style/find_edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btn_cancel"
+            android:background="@drawable/rounded_edittext"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="@dimen/dis_20"
+            android:focusable="true"
+            android:hint="@string/search_input_tip"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/color_cccc"
+            android:textCursorDrawable="@color/blue" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/app_cancel" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <com.meishai.ui.sliding.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis_80" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabs" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

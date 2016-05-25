@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/backMain" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/input_vc_title" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:clickable="true"
+            android:text="@string/login"
+            android:textColor="@color/title_text"
+            android:textSize="@dimen/subhead_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical"
+        android:paddingTop="25dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <EditText
+                style="@style/reg_edit_style"
+                android:hint="@string/input_vc_hint"
+                android:inputType="phone"
+                android:textSize="@dimen/tab_text_size" />
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dip"
+            android:orientation="vertical"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <Button
+                android:id="@+id/nextSetp"
+                style="@style/button_height_90"
+                android:layout_width="match_parent"
+                android:background="@drawable/btn_selector"
+                android:clickable="true"
+                android:text="@string/next_step"
+                android:textColor="@color/title_text"
+                android:textSize="@dimen/login_button_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

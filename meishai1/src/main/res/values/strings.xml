@@ -1,0 +1,341 @@
+<resources>
+
+    <string name="refreshlist_footer_hint_ready">松开载入更多</string>
+    <string name="refreshlist_footer_hint_normal">查看更多</string>
+    <string name="refreshlist_refresh_pull_label">下拉刷新</string>
+    <string name="refreshlist_header_hint_ready">松开刷新数据</string>
+    <string name="refreshlist_header_hint_loading">正在加载\.\.\.</string>
+    <string name="add_att_wait">正在关注，请稍候\.\.\.</string>
+    <string name="can_att_wait">正在取消，请稍候\.\.\.</string>
+    <string name="back_tip_login">您还未登录</string>
+    <string name="tip_login">未登录</string>
+    <string name="exit_dialog_title">您的操作将会退出</string>
+    <string name="exit_login_title">您的操作将会退出登录</string>
+    <string name="network_wait">请稍候\.\.\.</string>
+    <string name="button_text_no">取消</string>
+    <string name="button_text_tips">提示</string>
+    <string name="button_text_yes">确定</string>
+    <string name="btn_mod">修改</string>
+    <string name="btn_del">删除</string>
+    <string name="btn_txt_no">否</string>
+    <string name="btn_txt_yes">是</string>
+    <string name="app_name">美晒</string>
+    <!--<string name="app_name">美晒-购物助手</string>-->
+    <string name="app_back">返回</string>
+    <string name="webview_back">返回美晒</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_close">关闭</string>
+    <string name="app_submit">提交</string>
+    <string name="add">添加</string>
+    <string name="app_exit">退出登录</string>
+    <string name="app_save">保存</string>
+    <string name="next_step">下一步</string>
+    <string name="base_url">http://www.meishai.com/app.php?op=</string>
+    <string name="weibosdk_demo_toast_auth_success">授权成功</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+    <string name="search_input_tip">请输入关键词</string>
+    <string name="tip_taobao_max">最多只能绑定5个淘宝账号</string>
+    <!-- 会员注册 Main -->
+    <string name="backMain">主页</string>
+    <string name="user_login">会员登录</string>
+    <string name="regist">注册</string>
+    <string name="login_meishai">美晒账号登录</string>
+    <string name="login_user_hint">用户名/已验证手机/已验证邮箱</string>
+    <string name="login_pass_hint">密码</string>
+    <string name="login">登录</string>
+    <string name="forget_pass">忘记密码？</string>
+    <string name="txt_forget_pass">忘记密码</string>
+    <string name="login_fast">第三方账号快速登录</string>
+
+    <!-- 会员注册 注册页面 -->
+    <string name="user_regist">注册</string>
+    <string name="user_txt_mobile">手机号</string>
+    <string name="user_verify_code">验证码</string>
+    <string name="user_reg_next">下一步</string>
+    <string name="make_sure_phone_online">请确保您的手机通畅，用于接收验证码短信</string>
+    <string name="input_phone_num">请输入11位手机号码</string>
+    <string name="get_verify_code">获取验证码短信</string>
+    <string name="regit_warm_pre">注册代表您同意</string>
+    <string name="regit_warm_sub">《美晒软件许可及服务协议》</string>
+    <string name="regit_account_type">账户类型</string>
+    <string name="regit_uer_nickname">用户昵称</string>
+    <string name="regit_uer_nickname_tip">用户名</string>
+    <string name="regit_set_password">设置密码</string>
+    <string name="regit_set_password_tip">密码</string>
+    <string name="regit_qq">QQ号码&#160;&#160;</string>
+    <string name="regit_qq_tip">QQ号</string>
+    <string name="regit_email">邮箱地址</string>
+    <string name="regit_email_tip">E-mail地址</string>
+    <string name="regit_region">选择地区</string>
+    <string name="regit_region_tip">所在地区</string>
+    <string name="regit_finish">确认提交</string>
+    <string name="input_vc_title">填写验证码</string>
+    <string name="had_send_vc">已经发送验证码短信到%1$s,请稍后</string>
+    <string name="input_vc_hint">请输入验证码</string>
+    <string name="username_not_null">用户名不能为空</string>
+    <string name="invalid_username">无效的用户名</string>
+    <string name="invalid_pwd">无效的密码</string>
+    <string name="pwd_not_null">密码不能为空</string>
+    <string name="invalid_new_pwd_not_null">新密码不能为空</string>
+    <string name="invalid_qq">无效的QQ</string>
+    <string name="invalid_email">无效的Email</string>
+    <string name="invalid_email_not_null">Email不能为空</string>
+    <string name="invalid_phone_numb">您输入的账号非法</string>
+    <string name="invalid_phone_illegal">您输入的手机号码非法</string>
+    <string name="invalid_id_name">用户名或者账户非法</string>
+    <string name="invalid_new_pwd">两次输入的新密码不一致!</string>
+    <string name="invalid_choose_addres">请选择地区信息</string>
+    <string name="invalid_addres">你输入的住址不合法</string>
+    <string name="invalid_zip">你输入的邮编不合法</string>
+    <string name="invalid_Intro">你输入个人简介不合法，建议6到100个字符。</string>
+
+    <!-- 晒晒主页 -->
+    <string name="shaishai">美晒</string>
+    <string name="topic">话题</string>
+    <string name="txt_jc">精彩</string>
+
+    <!-- 晒晒分类 -->
+    <string name="title_shaishai_cate">美晒分类</string>
+    <string name="shaishai_cate_search_input_tip">搜索帖子和话题</string>
+
+    <!-- 晒晒帖子 -->
+    <string name="post">晒晒详情</string>
+    <string name="f_louid">%1$d楼</string>
+    <string name="comment_count">(%1$d)</string>
+    <string name="comment_hint">回复%1$s：</string>
+    <string name="tip_comment">请输入回复内容</string>
+
+    <!-- 晒晒频道 -->
+    <string name="channel">晒晒频道</string>
+
+    <!-- 个人主页 -->
+    <string name="title_homepage">个人主页</string>
+    <string name="title_my_home">我的主页</string>
+    <string name="homepage_attention">关注</string>
+    <string name="homepage_pri_msg">私信</string>
+    <string name="homepage_post_num">帖子：%1$d</string>
+    <string name="homepage_fans_num">粉丝：%1$d</string>
+    <string name="homepage_zan_num">赞：%1$d</string>
+    <string name="page_title_home">她的主页</string>
+    <string name="page_title_topic">她的话题</string>
+    <string name="page_title_follow">她的关注</string>
+    <string name="page_title_fans">她的粉丝</string>
+
+    <!-- 签到 -->
+    <string name="sign_today_point">+%1$d分</string>
+    <string name="sign_tomorrow_point">+%1$d分</string>
+    <string name="sign_mypoint">我的积分：%1$d分</string>
+
+    <!-- 发现主页 -->
+    <string name="meiwu">美物</string>
+    <string name="meiwu_special_list">品质专场</string>
+    <string name="meiwu_topic">专场详情</string>
+    <string name="meiwu_strat">攻略详情</string>
+    <string name="meiwu_goods_detail">商品详情</string>
+    <string name="copy_complete">复制成功</string>
+    <string name="has_like">已喜欢</string>
+    <string name="not_like">我喜欢</string>
+    <string name="has_collect">已收藏</string>
+    <string name="not_collect">收藏</string>
+    <string name="find">发现</string>
+    <string name="find_beauty_circle">美女圈</string>
+    <string name="find_master">美晒达人</string>
+    <string name="find_sale">喜折特价</string>
+    <string name="find_amoy_goods">淘货</string>
+    <string name="find_point">积分商城</string>
+    <string name="find_red_envelope">红包福利</string>
+    <string name="master_apply">达人申请</string>
+    <string name="find_price">￥%1$.1f</string>
+    <string name="find_discount">%1$.1f</string>
+    <string name="find_point_exchange">积分兑换</string>
+    <string name="earn_points">赚积分</string>
+    <string name="find_point_price">价值：%1$.1f元</string>
+    <string name="find_point_allnum">名额：%1$d人</string>
+    <string name="find_point_lowpoint">%1$d积分</string>
+    <string name="find_point_groupid">对象：V%1$d以上会员</string>
+    <string name="find_sign_txt">签到赚积分</string>
+    <string name="find_cate">分类</string>
+    <string name="find_point_detail_allnum">限量：%1$d份</string>
+    <string name="find_point_detail_lastnum">剩余%1$d份</string>
+    <string name="find_point_detail_ori_endtime">剩余时间：</string>
+    <string name="find_point_detail_endtime">剩余时间：%1$s</string>
+    <string name="find_master_areaname">(%1$s)</string>
+    <string name="find_master_post_num">帖子：%1$d</string>
+    <string name="find_master_fans_num">粉丝：%1$d</string>
+    <string name="plus_attention">加关注</string>
+    <string name="has_attention">已关注</string>
+    <string name="del_attention">取消关注</string>
+    <string name="txt_attention">关注</string>
+    <string name="find_point_order">确认订单</string>
+    <string name="find_userpoint">您目前有：%1$d积分</string>
+    <string name="tv_xb_tip">小编提醒：%1$s</string>
+
+    <!-- 拍照主页 -->
+    <string name="camera">拍照</string>
+    <string name="release">发布晒晒</string>
+    <string name="publish">发布</string>
+    <string name="choose_cate">选择分类</string>
+    <string name="location_hide">不显示</string>
+    <string name="release_input_tip">请输入文字内容...</string>
+    <string name="btn_has_choose">确定 %1$d/%2$d</string>
+    <string name="btn_no_choose">确定</string>
+
+    <!-- 试用主页 -->
+    <string name="tryuse">试用</string>
+    <string name="fuli">福利社</string>
+    <string name="try_detail">试用详情</string>
+    <string name="tryuser_price">价值 %1$.0f元</string>
+    <string name="tryuser_snum">限量 %1$d份</string>
+    <string name="tryuser_appnum">%1$d人申请</string>
+    <string name="has_finish">已结束</string>
+    <string name="tryuser_allnum">限量：%1$d份</string>
+    <string name="tryuser_appnum_n">参与：%1$d人</string>
+    <string name="tryuser_endday">距离结束：%1$d天</string>
+    <string name="tryuse_detail_endtime">剩余时间：%1$s</string>
+    <string name="tryuse_detail_app_tv">%1$d人申请，%2$d人获取试用，%3$d人已领取</string>
+    <string name="tryuse_detail_tv_snum">限量：%1$d份,价值：%2$s元,商家已存担保金%3$s元</string>
+    <string name="title_perfect_personal">完善个人资料</string>
+    <string name="choose_area">选择地区</string>
+    <string name="tip_choose_area">必须选择地区</string>
+    <string name="input_phone">手机号码</string>
+    <string name="tip_input_phone">必须输入手机号码</string>
+    <string name="input_qq">QQ号码</string>
+    <string name="tip_input_qq">必须输入QQ号码</string>
+    <string name="input_wangwang">联系旺旺</string>
+    <string name="choose_wangwang">选择联系旺旺</string>
+    <string name="tip_choose_wang">必须选择旺旺</string>
+    <string name="tip_input_wang">必须输入旺旺</string>
+
+    <!-- 我的 -->
+    <string name="user_my">我的</string>
+    <string name="user_info">个人信息</string>
+    <string name="title_sec">安全设置</string>
+    <string name="bind_mobile">绑定手机</string>
+    <string name="bind_email">绑定邮箱</string>
+    <string name="txt_mobile">手机号码</string>
+    <string name="txt_email">E-mail</string>
+    <string name="txt_email_verify_code">验证码</string>
+    <string name="hint_input_mobile_tip">请输入11位手机号码</string>
+    <string name="txt_verify_code">验证码&#160;&#160;&#160;&#160;</string>
+    <string name="hint_input_code_tip">请输入验证码</string>
+    <string name="txt_get_verify_code">获取验证码</string>
+    <string name="hint_input_email_tip">请输入邮箱地址</string>
+    <string name="personal_introd">个人介绍</string>
+    <string name="hint_input_personal_introd_tip">请输入个人介绍！</string>
+    <string name="title_receive_address">收货地址</string>
+    <string name="txt_choose_area">选择地区</string>
+    <string name="hint_choose_area_tip">地区信息</string>
+    <string name="hint_del_address_tip">街道门牌信息</string>
+    <string name="txt_postal_code">邮政编码</string>
+    <string name="txt_receiver">收货人&#160;&#160;&#160;&#160;</string>
+    <string name="hint_receiver_tip">收货人姓名</string>
+    <string name="user_nickname">我的昵称</string>
+    <string name="title_nickname">修改昵称</string>
+    <string name="title_mod_pass">修改密码</string>
+    <string name="txt_old_pass">旧密码&#160;&#160;&#160;&#160;</string>
+    <string name="hint_old_pass_tip">输入原始密码</string>
+    <string name="txt_new_pass">新密码&#160;&#160;&#160;&#160;</string>
+    <string name="hint_new_pass_tip">请设置新密码</string>
+    <string name="txt_again_new_pass">重复新密码</string>
+    <string name="title_pay">支付信息</string>
+    <string name="txt_apply_mod">申请修改</string>
+    <string name="title_mod_pay">修改支付信息</string>
+    <string name="title_add_pay">添加支付信息</string>
+    <string name="title_taobao">联系旺旺</string>
+    <string name="title_taobao_add">添加联系旺旺</string>
+    <string name="title_taobao_mod">修改联系旺旺</string>
+    <!-- 我的私信 -->
+    <string name="title_pri_msg">我的私信</string>
+    <!-- 我的试用 -->
+    <string name="title_trial_filter">筛选</string>
+    <string name="title_trial_remind">试用提醒</string>
+    <string name="title_trial">我的试用</string>
+    <string name="trial_cacel">放弃试用</string>
+    <string name="trial_detail">查看详情</string>
+    <string name="title_submit_order">提交订单号</string>
+    <string name="title_submit_try">提交试用报告</string>
+    <string name="title_submit_screen">提交评价截图</string>
+    <string name="title_apply_dbj">申请担保金</string>
+    <string name="title_my_setting">我的设置</string>
+    <string name="title_setting">设置</string>
+    <string name="txt_help">帮助中心</string>
+    <string name="txt_protocol">用户协议</string>
+    <string name="txt_biz">商务合作</string>
+    <string name="work_qq">QQ：800066830</string>
+    <string name="txt_about">关于美晒</string>
+    <string name="txt_contact">联系我们</string>
+    <string name="txt_applink">应用推荐</string>
+    <string name="txt_score_award">评分有奖</string>
+    <string name="txt_version">版本检测</string>
+    <string name="sy_title">【试用编号:%1$d】%2$s</string>
+    <string name="price">%1$.1f元</string>
+    <string name="fprice">%1$.1f元</string>
+    <string name="hprice">(含%1$.1f元红包)</string>
+    <string name="txt_orderno">订单号：%1$s</string>
+    <string name="txt_yun_orderno">运单号：%1$s</string>
+    <string name="txt_ordertime">提交订单剩余时间：%1$s</string>
+    <string name="txt_ordertime_expire">已过期</string>
+    <string name="txt_ordertime_bg">提交试用报告剩余时间：%1$s</string>
+    <string name="txt_ordertime_bg_yjt">报告已提交</string>
+    <string name="txt_ordertime_jt">提交评价截图剩余时间：%1$s</string>
+    <string name="txt_ordertime_biz">商家审核试用报告剩余时间：%1$s</string>
+    <string name="txt_ordertime_biz_jt">商家审核评价截图剩余时间：%1$s</string>
+    <string name="txt_ordertime_sys">系统审核试用报告剩余时间：%1$s</string>
+    <string name="txt_ordertime_sys_jt">系统审核评价截图剩余时间：%1$s</string>
+    <string name="txt_ordertime_ref">重新提交试用报告剩余时间：%1$s</string>
+    <string name="txt_ordertime_ref_jt">重新提交评价截图剩余时间：%1$s</string>
+    <string name="txt_dbj_dsq">担保金待申请</string>
+    <string name="txt_dbj_yfh">担保金已返还</string>
+    <string name="txt_dbj_rzz">担保金入账中</string>
+    <string name="txt_ordertime_screen">评价截图剩余：%1$s</string>
+    <string name="tip_input_order">请输入订单号</string>
+    <string name="tv_commdity_price">商品价格：</string>
+    <string name="tv_down_price">商品价格：</string>
+    <string name="btn_no_orderno">免交订单号</string>
+    <string name="btn_no_dbj">免申担保金</string>
+    <!-- 我的积分 -->
+    <string name="title_point">我的积分</string>
+    <string name="title_credit">我的信用</string>
+    <string name="title_money">我的资金</string>
+    <string name="title_apply_cash">申请提现</string>
+    <string name="title_msg">我的消息</string>
+    <!-- 我的信用 -->
+    <string name="txt_credit">我的信用：%1$s</string>
+    <!-- 我的资金 -->
+    <string name="txt_money_value">%1$s元</string>
+    <string name="txt_amount">账号余额：%1$s元</string>
+    <string name="txt_apply_cash_tip">请输入提现金额</string>
+    <!-- 我的福利 -->
+    <string name="title_welfare">我的福利</string>
+    <string name="txt_typename">福利渠道：%1$s</string>
+    <string name="txt_expressname">快递名称：%1$s</string>
+    <string name="txt_expressno">快递单号：%1$s</string>
+    <string name="txt_isshare">晒福利</string>
+    <string name="txt_has_share">已晒</string>
+
+    <!-- 我的收藏 -->
+    <string name="title_fav">我的收藏</string>
+
+    <!-- 网络交互 -->
+    <string name="reqFailed">网络请求失败!</string>
+    <string name="reqDataFailed">网络返回数据失败!</string>
+
+    <!-- Drop down list -->
+    <string name="drop_down_list_header_default_text">点击可以刷新</string>
+    <string name="drop_down_list_header_pull_text">下拉可以刷新</string>
+    <string name="drop_down_list_header_release_text">松开刷新</string>
+    <string name="drop_down_list_header_loading_text">加载中</string>
+    <string name="drop_down_list_footer_default_text">更多</string>
+    <string name="drop_down_list_footer_loading_text">加载中</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多了</string>
+    <string name="image_content">Image</string>
+    <string name="menu_line_content">menu_top_line</string>
+
+    <!-- Gallery -->
+    <string name="picture_is_too_large_so_enable_software_layer">图片太大，启用软件渲染模式，滚动会掉帧……</string>
+    <string name="picture_read_failed">图片解析失败</string>
+    <string name="wait_for_download_picture">等待图片下载……</string>
+    <string name="picture_cant_download_or_sd_cant_read">图片下载失败或是SD卡无法读取</string>
+
+</resources>

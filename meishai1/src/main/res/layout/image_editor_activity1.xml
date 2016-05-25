@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+    <!--<include layout="@layout/image_editor_fragment"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#333333"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/image_edit_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_arrow_white"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/image_edit_pics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_edit_add"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/add_pic_selector"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#aa000000"/>
+
+    <FrameLayout
+        android:id="@+id/image_edit_image_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="220dp">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/image_edit_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#aa000000">
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#333333"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/image_edit_crop"
+            style="@style/image_edit_layout_style1">
+
+            <ImageView
+                android:id="@+id/image_edit_crop_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/crop_selector"/>
+
+            <TextView
+                android:id="@+id/image_edit_crop_text"
+                style="@style/image_edit_tag_style1"
+                android:text="裁剪"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp"
+            android:background="#666666"/>
+
+        <LinearLayout
+            android:id="@+id/image_edit_filter"
+            style="@style/image_edit_layout_style1">
+
+            <ImageView
+                android:id="@+id/image_edit_filter_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/filter_selector"/>
+
+            <TextView
+                android:id="@+id/image_edit_filter_text"
+                style="@style/image_edit_tag_style1"
+                android:text="滤镜"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp"
+            android:background="#666666"/>
+
+        <LinearLayout
+            android:id="@+id/image_edit_tags"
+            style="@style/image_edit_layout_style1">
+
+            <ImageView
+                android:id="@+id/image_edit_tags_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/sticker_selector"/>
+
+            <TextView
+                android:id="@+id/image_edit_tags_text"
+                style="@style/image_edit_tag_style1"
+                android:text="贴纸"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/image_edit_layout_style"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/image_edit_confirm"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cir_yellow_btn_selector"
+                android:text="下一步"
+                android:textColor="#8d3203"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

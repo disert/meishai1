@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/lay_corners_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/lay_ct_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_80"
+        android:gravity="center"
+        android:text="@string/title_apply_cash"
+        android:textColor="@color/txt_color" />
+
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_75"
+        android:layout_marginLeft="@dimen/dis_30" >
+
+        <LinearLayout
+            android:id="@+id/lay_account_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/lay_ct_text_input"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="账号余额：" />
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/lay_ct_text_input"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fee"
+            style="@style/lay_ct_text_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/lay_account_balance"
+            android:ellipsize="middle"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="手续费：1元"
+            android:textColor="#FF0000" />
+    </RelativeLayout>
+
+    <View style="@style/view_hor_margin_all_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_75"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/lay_ct_text_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="手机号码：" />
+
+        <TextView
+            android:id="@+id/phone"
+            style="@style/lay_ct_text_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="13412345678" />
+    </LinearLayout>
+
+    <View style="@style/view_hor_margin_all_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_75"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/lay_ct_text_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="支付宝账号：" />
+
+        <TextView
+            android:id="@+id/alipay"
+            style="@style/lay_ct_text_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="189****1280(张三)" />
+    </LinearLayout>
+
+    <View style="@style/view_hor_margin_all_line" />
+
+    <EditText
+        android:id="@+id/apply_cash"
+        style="@style/edit_shape_style"
+        android:layout_marginBottom="@dimen/dis_15"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:layout_marginTop="@dimen/dis_15"
+        android:hint="@string/txt_apply_cash_tip"
+        android:inputType="numberDecimal"
+        android:maxLength="11"
+        android:singleLine="true" />
+
+    <View style="@style/view_hor_margin_all_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dip"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_close"
+            style="@style/sy_btn_style"
+            android:background="@drawable/btn_trial_close_selector"
+            android:text="@string/app_cancel" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/sy_btn_style"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_selector"
+            android:text="@string/app_submit" />
+    </LinearLayout>
+
+</LinearLayout>

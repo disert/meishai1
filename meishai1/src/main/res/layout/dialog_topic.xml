@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/topic_pop_share"
+        android:layout_width="wrap_content"
+        android:src="@drawable/topic_share"
+        android:layout_height="wrap_content" />
+
+    <com.meishai.app.widget.CircleImageView
+        android:id="@+id/topic_pop_avatar"
+        android:layout_marginTop="30dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/topic_pop_avatar"
+        android:textColor="#555555"
+        android:drawableLeft="@drawable/fans"
+        android:drawablePadding="5dp"
+        android:text="1111个粉丝"
+        android:layout_centerHorizontal="true" 
+        android:id="@+id/topic_pop_fans_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="#acacac"
+        android:text="只看精选"
+        android:background="@drawable/btn_hand_pick_selector"
+        android:layout_below="@id/topic_pop_fans_num"
+        android:layout_centerHorizontal="true" 
+        android:layout_marginTop="30dp"
+        android:id="@+id/topic_pop_hand_pick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@id/topic_pop_hand_pick"
+        android:id="@+id/topic_pop_rangking_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#acacac" />
+
+            <TextView
+                android:id="@+id/topic_pop_rankings_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="最佳贡献排行榜"
+                android:textColor="#acacac" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="#acacac" />
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/topic_pop_ranking_list"></LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/lay_corners_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/lay_ct_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_75"
+        android:gravity="center"
+        android:text="查看试用进程"
+        android:textColor="@color/txt_color" />
+
+    <View style="@style/view_hor_match_line" />
+
+    <ListView
+        android:id="@+id/process_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fastScrollEnabled="false"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dip"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_close"
+            style="@style/sy_btn_style"
+            android:background="@drawable/btn_trial_close_selector"
+            android:text="@string/app_close" />
+    </LinearLayout>
+
+</LinearLayout>

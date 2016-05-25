@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <View style="@style/view_hor_match_line" />
+
+    <View
+        style="@style/view_place_transparent"
+        android:background="@color/main_back" />
+
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp" >
+
+        <ImageView
+            android:id="@+id/free_trial_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/free_trial_new"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/isnew_icon"
+            android:scaleType="fitStart"
+            android:gravity="center" />
+        <ImageView
+            android:id="@+id/free_trial_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/free_trial_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:gravity="center_vertical"
+        android:text="澳洲 纯羊毛..."
+        android:textColor="#555555"
+        android:textSize="@dimen/dis_30" />
+
+    <View style="@style/view_hor_margin_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:id="@+id/free_trial_allnum"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:gravity="center_vertical"
+            android:text="限量3份"
+            android:textColor="#999999"
+            android:textSize="@dimen/dis_24" />
+
+        <TextView
+            android:id="@+id/free_trial_appnum"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:layout_toRightOf="@id/free_trial_allnum"
+            android:gravity="center_vertical"
+            android:text="参与3646人"
+            android:textColor="#999999"
+            android:textSize="@dimen/dis_24" />
+
+        <TextView
+            android:id="@+id/free_trial_endday"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:layout_marginRight="@dimen/dis_30"
+            android:gravity="center_vertical"
+            android:text="距离结束:2天"
+            android:textColor="#999999"
+            android:textSize="@dimen/dis_24" />
+    </RelativeLayout>
+
+</LinearLayout>

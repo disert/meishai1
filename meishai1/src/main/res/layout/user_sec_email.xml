@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/app_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/bind_email" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/top_title_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_save" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout style="@style/lay_ct_input" >
+
+                <TextView
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_email" />
+
+                <EditText
+                    android:id="@+id/userEmail"
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dis_50"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_input_email_tip"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout style="@style/lay_ct_input" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/btn_verify_code" >
+
+                    <TextView
+                        style="@style/lay_ct_text_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_email_verify_code" />
+
+                    <EditText
+                        android:id="@+id/verifyCode"
+                        style="@style/lay_ct_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dis_50"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_input_code_tip"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_verify_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:text="@string/txt_get_verify_code"
+                    android:textColor="#2b2bfb" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

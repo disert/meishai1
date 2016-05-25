@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout style="@style/top_titile_style">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/top_title_text"-->
+            <!--android:text="发布晒晒"/>-->
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/top_title_button_save"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/publish"/>
+    </RelativeLayout>
+
+    <!--<com.meishai.app.widget.progressbar.TextProgressBar-->
+    <!--android:id="@+id/pb_progressbar"-->
+    <!--style="@style/StyleProgressBarMini"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:background="@drawable/shape_progressbar_bg"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:max="100"-->
+    <!--android:progress="10" -->
+    <!--android:visibility="gone"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/header_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dis_30"
+                    android:paddingLeft="@dimen/dis_20"
+                    android:paddingTop="@dimen/dis_30">
+
+                    <ImageView
+                        android:id="@+id/header_image"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+
+                        android:src="@drawable/place_default"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/header_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="sdlfksdjlfsdlfjlsdfsldfdskflw"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/header_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="12sp"
+                            android:text="sdlfksdjlfsdlfjlsdfsldfdskflw"
+                            android:textColor="#999999"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/header_more"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:src="@drawable/right_arrow"
+                        android:background="@android:color/transparent"/>
+
+
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line"/>
+
+                <View
+                    style="@style/view_place_transparent"
+                    android:background="@color/main_back"/>
+
+                <View style="@style/view_hor_match_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dis_20"
+                android:paddingTop="@dimen/dis_30">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dis_30"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/pics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/add_pic"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/add_pic_white"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <zhaohg.emojiview.EmojiEditText
+                android:id="@+id/release_edit"
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:hint="分享您的购买经历和使用心得"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccc"
+                android:textSize="12sp"/>
+
+            <com.meishai.app.widget.layout.FlowLayout
+                android:id="@+id/release_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+            </com.meishai.app.widget.layout.FlowLayout>
+
+            <!--<View style="@style/view_hor_match_line" />-->
+
+            <!--<View style="@style/view_place_transparent" />-->
+
+            <!--<View style="@style/view_hor_match_line" />-->
+
+
+
+
+
+            <View style="@style/view_hor_match_line"/>
+
+            <View
+                style="@style/view_place_transparent"
+                android:background="@color/main_back"/>
+
+            <View style="@style/view_hor_match_line"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/areaname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/release_localtion"
+                    android:drawablePadding="8dp"
+                    android:textSize="10sp"
+                    android:textColor="#929292"
+                    android:gravity="center_vertical"
+                    android:text="@string/location_hide" />
+
+                <ImageButton
+                    android:id="@+id/chk_location"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/release_localtion_hide" />
+            </RelativeLayout>
+            <View style="@style/view_hor_match_line"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/tag_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="热门标签"
+                android:paddingLeft="5dp"
+                android:textColor="#929292"
+                android:textSize="10sp"/>
+            </LinearLayout>
+
+            <com.meishai.app.widget.layout.FlowLayout
+                android:id="@+id/gv_cate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:listSelector="@android:color/transparent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+            </com.meishai.app.widget.layout.FlowLayout>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_back"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分享至:"
+                        android:textColor="#929292"
+                        android:textSize="10sp"/>
+
+                    <ImageView
+                        android:id="@+id/release_share_wechat"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="12dp"
+                        android:src="@drawable/share_wechat_selector"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/release_add_linked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:background="@drawable/cir_yellow_btn_selector"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/release_add_linked_icon"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/linked_icon"/>
+                    <TextView
+                        android:id="@+id/release_add_linked_text"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加链接"/>
+
+                </LinearLayout>
+
+                <!--<Button-->
+                    <!--android:visibility="gone"-->
+                    <!--android:id="@+id/release_add_linked"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:background="@drawable/cir_yellow_btn_selector"-->
+                    <!--android:drawableLeft="@drawable/linked_icon"-->
+                    <!--android:drawablePadding="8dp"-->
+                    <!--android:paddingLeft="8dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:text="添加链接"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:textSize="10sp"/>-->
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/lay_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View style="@style/view_hor_match_line"/>
+
+            <RelativeLayout
+                style="@style/lay_ct"
+                android:background="#FEFEFE">
+
+                <ImageButton
+                    android:id="@+id/ig_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/release_bq_selector"/>
+
+                <ImageButton
+                    android:id="@+id/ig_toggle_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/down"/>
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <!--
+                 <zhaohg.emojiview.EmojiViewEx
+                android:id="@+id/emojiView"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="#EEEEEE"
+                emoji:categoryHeight="40dp"
+                emoji:indicatorDotsColor="#222222" />
+            -->
+
+            <LinearLayout
+                android:id="@+id/send_tool_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/add_tool"
+                    layout="@layout/send_msg_tool"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

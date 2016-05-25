@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="7dp"
+    android:paddingTop="7dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.5dp"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/point_reward_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/point_reward_typetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_cir_red"
+                android:padding="2dp"
+                android:text="积分兑换"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/point_reward_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
+                android:lines="2"
+                android:paddingTop="5dp"
+                android:text="                 描述信息阿苏大发隧道发送打法大赛复赛地方司法所担负"
+                android:textColor="#555555"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/point_reward_lowpoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="5000积分"
+                android:textColor="#ff5577"
+                android:textSize="@dimen/dis_24" />
+
+            <TextView
+                android:id="@+id/point_reward_allnum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="15份"
+                android:textColor="#999999"
+                android:textSize="@dimen/dis_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/view_ver_match_line"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        style="@style/view_ver_match_line"
+        android:layout_alignParentRight="true" />
+
+    <View
+        style="@style/view_hor_match_line"
+        android:layout_alignParentTop="true" />
+
+    <View
+        style="@style/view_hor_match_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

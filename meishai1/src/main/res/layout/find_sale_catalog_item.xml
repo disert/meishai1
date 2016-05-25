@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/my_lay_selector"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30" >
+
+        <com.meishai.app.widget.CircleNetWorkImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/dis_110"
+            android:layout_height="@dimen/dis_110"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/lay_ct_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis_20"
+            android:layout_toRightOf="@+id/image"
+            android:drawableRight="@drawable/right_arrow"
+            android:text="女装" />
+    </RelativeLayout>
+
+</LinearLayout>

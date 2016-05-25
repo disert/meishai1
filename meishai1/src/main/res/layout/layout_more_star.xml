@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <View style="@style/view_place_transparent"
+        android:background="@color/main_back"/>
+    <View style="@style/view_hor_match_line"/>
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.meishai.app.widget.RoundCornerImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/avatar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_toRightOf="@+id/avatar"
+            android:text="小玉米"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lasttime"
+            android:layout_toRightOf="@+id/avatar"
+            android:text="12分钟前"
+            android:textSize="10sp"
+            android:textColor="#929292"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vip_grade"
+            android:layout_toRightOf="@+id/username"
+            android:text="V1会员"
+            android:textSize="8sp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:textColor="#FFFFFF"
+            android:background="#0000ff"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:id="@+id/attention"
+            android:text="关注"
+            android:gravity="center"
+            android:textColor="@drawable/tv_attention_color_selector"
+            android:background="@drawable/tv_attention_selector"
+            android:layout_marginLeft="8dp"/>
+
+    </RelativeLayout>
+
+    <com.meishai.app.widget.layout.NoScrollGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:id="@+id/images_grid"></com.meishai.app.widget.layout.NoScrollGridView>
+
+    <View style="@style/view_hor_match_line"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

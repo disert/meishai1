@@ -1,0 +1,90 @@
+<resources>
+    
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_m">24sp</dimen>
+    <dimen name="text_size_s">17sp</dimen>
+    <dimen name="button_height">40dp</dimen>
+
+    <dimen name="max_header_height">220dp</dimen>
+    <dimen name="header_offset_dis">175dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="border_radius_with_dimensions">0.5dp</dimen>
+    <dimen name="size_1">20sp</dimen>
+    <dimen name="size_2">18sp</dimen>
+    <dimen name="size_3">16sp</dimen>
+    <dimen name="tab_text_size">9sp</dimen>
+    <dimen name="subhead_text_size">17sp</dimen>
+    <dimen name="main_title_text_size">19sp</dimen>
+    <dimen name="login_button_text_size">20sp</dimen>
+    <dimen name="tv_text_size">18sp</dimen>
+    <dimen name="et_txt_size">12sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <!-- 13.5点 -->
+    <dimen name="text_size_13">13.5sp</dimen>
+    <!-- 18点 -->
+    <dimen name="text_size_10">10sp</dimen>
+    <!-- 80px -->
+    <dimen name="dis_80">40dp</dimen>
+    <!-- 75px -->
+    <dimen name="dis_75">37.5dp</dimen>
+    <!-- 50px -->
+    <dimen name="dis_50">25dp</dimen>
+    <dimen name="dis_70">35dp</dimen>
+    <dimen name="dis_95">47.5dp</dimen>
+    <dimen name="dis_35">17.5dp</dimen>
+    <dimen name="dis_36">18dp</dimen>
+    <dimen name="dis_40">20dp</dimen>
+    <dimen name="dis_45">22.5dp</dimen>
+    <dimen name="dis_30">15dp</dimen>
+    <dimen name="dis_24">12dp</dimen>
+    <dimen name="dis_25">12.5dp</dimen>
+    <dimen name="dis_20">10dp</dimen>
+    <dimen name="dis_16">8dp</dimen>
+    <dimen name="dis_90">45dp</dimen>
+    <dimen name="dis_5">2.5dp</dimen>
+    <dimen name="dis_60">30dp</dimen>
+    <dimen name="dis_10">5dp</dimen>
+    <dimen name="dis_110">55dp</dimen>
+    <dimen name="dis_100">50dp</dimen>
+    <dimen name="dis_150">75dp</dimen>
+    <dimen name="dis_160">70dp</dimen>
+    <dimen name="dis_170">85dp</dimen>
+    <dimen name="dis_140">70dp</dimen>
+    <dimen name="dis_130">65dp</dimen>
+    <dimen name="dis_115">57.5dp</dimen>
+    <dimen name="dis_120">60dp</dimen>
+    <dimen name="dis_135">67.5dp</dimen>
+    <dimen name="dis_72">36dp</dimen>
+    <dimen name="dis_15">7.5dp</dimen>
+    <dimen name="hei_90">45dp</dimen>
+    <dimen name="hei_96">48dp</dimen>
+    <dimen name="hei_64">32dp</dimen>
+    <dimen name="hei_60">30dp</dimen>
+
+    <!-- 30点 -->
+    <dimen name="size_30">16sp</dimen>
+    <!-- 24点 -->
+    <dimen name="size_24">13.5sp</dimen>
+    <!-- 20点 -->
+    <dimen name="size_20">11sp</dimen>
+
+    <!-- DropDownListView -->
+    <dimen name="drop_down_list_header_padding_top">12dp</dimen>
+    <dimen name="drop_down_list_header_padding_bottom">15dp</dimen>
+    <dimen name="drop_down_list_header_release_min_distance">20dp</dimen>
+    <dimen name="drop_down_list_header_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_button_margin_left">8dp</dimen>
+    <dimen name="drop_down_list_footer_button_height">48dp</dimen>
+
+    <!-- PullToRefresh -->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">25dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">10dp</dimen>
+    <dimen name="header_footer_internal_padding">20dp</dimen>
+
+</resources>

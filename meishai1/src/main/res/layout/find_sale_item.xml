@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_lay_selector"
+    android:descendantFocusability="blocksDescendants" >
+
+    <com.meishai.net.volley.toolbox.NetworkImageView
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumb"
+        android:layout_marginBottom="@dimen/dis_10"
+        android:layout_marginTop="@dimen/dis_10"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/dis_10"
+        android:paddingRight="@dimen/dis_10"
+        android:singleLine="true"
+        android:textColor="@color/master_username_color"
+        android:textSize="14.5sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:paddingBottom="@dimen/dis_20"
+        android:paddingLeft="@dimen/dis_10"
+        android:paddingRight="@dimen/dis_10"
+        android:paddingTop="@dimen/dis_10" >
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="￥139.82"
+            android:textColor="@color/title_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/price"
+            android:text="589.20"
+            android:textColor="@color/txt_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/to_taobao"
+            android:layout_width="65dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_find_taobao_selector"
+            android:text="去抢购"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

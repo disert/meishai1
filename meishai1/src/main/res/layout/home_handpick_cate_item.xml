@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        style="@style/view_hor_match_line"
+        android:layout_marginTop="@dimen/dis_20" />
+
+    <com.meishai.app.widget.ScrollGridView
+        android:id="@+id/cate_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:background="@color/white"
+        android:numColumns="4"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="@dimen/dis_25"
+        android:paddingTop="@dimen/dis_25"
+        android:verticalSpacing="14dip" />
+
+    <View style="@style/view_hor_match_line" />
+
+    <LinearLayout
+        android:id="@+id/cate_show_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="24dip"
+        android:background="#E8E8E8"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/cate_show_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/down" />
+    </LinearLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+</LinearLayout>

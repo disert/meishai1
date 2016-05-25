@@ -1,0 +1,629 @@
+<manifest
+    package="com.meishai"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="23"
+    android:versionName="2.6.2">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="22"/>
+
+
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false"/>
+
+    <application
+        android:name="com.meishai.GlobalContext"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--百度自动更新的key和appid-->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="7133748"/>
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="Xz6NGGwnCOk2j6dGbyW5epYN2lcLXo0o"/>
+
+        <!-- 友盟appkey等信息-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="559e60b067e58efc85003c46">
+        </meta-data>
+        <!-- 友盟统计的渠道id-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="meishai">
+        </meta-data>
+
+
+        <!-- 自定义渠道统计 -->
+        <meta-data
+            android:name="com.meishai.channelid"
+            android:value="${CHANNEL_VALUE}"/>
+
+
+        <activity
+            android:name="com.meishai.ui.SplashActivity"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.SplashActivity1"/>
+        <activity
+            android:name="com.meishai.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meishai.app.widget.gallery.GalleryAnimationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:theme="@style/GalleryTheme"/>
+        <activity
+            android:name="com.meishai.ui.fragment.home.ChannelPickActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.meishai.ui.fragment.home.ChannelShowActivity"/>
+        <activity android:name="com.meishai.ui.fragment.home.TopicShowActivity"/>
+        <activity
+            android:name="com.meishai.ui.fragment.home.PostShowActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ui.fragment.home.CommentActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name="com.meishai.ui.fragment.home.PostShowActivity1"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryUseCateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryuseDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindSaleCateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindSaleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.ReleaseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.ReleaseActivity1"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.ChooseCateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomePageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomePageActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindSaleWebviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomeCateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomeCateActivity1"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindSaleCateSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindSaleSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".ui.fragment.meiwu.MeiWuShopsShowActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryUseCateSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomeTopicActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindMasterApplyWebviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryUseSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.ChannelShowFragmentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindMasterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 发现积分 -->
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindPointActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindEranPointActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindPointDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.meiwu.FindPointOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.home.HomePostAndTopicSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryUseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryNUseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.TryUseListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.fragment.meiwu.SearchActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.meishai.ui.fragment.MeishaiWebviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.UpgradeWebviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.album.imageloader.ImageChooseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.CameraActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+
+        <!-- 收货地址 -->
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserReceiveAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!-- 淘宝账号 -->
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserTaobaoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserTaoBaoOperActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!-- 支付信息 -->
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserPayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserModPayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserSecActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserSecEmailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserSecMobileActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserTrialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserFavActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!-- 登录注册相关Activity -->
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.RegistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.RegistSceondSetpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserIntrodActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserNicknameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserModPassActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserPointActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserCreditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserMoneyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserMyMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserTrialRemindActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserPriMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.usercenter.UserWelfareActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 调用新浪原生SDK，需要注册的activity -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuSpecialShowActivity">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuStratListActivity">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuSpecialListActivity">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuStratDetailActivity">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuStratDetailActivity1"/>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuGoodsDetailActivity">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.meiwu.MeiWuCateDetailActivity">
+        </activity>
+        <!-- 发布相关activity-->
+        <activity
+            android:name="com.meishai.ui.fragment.camera.ImageChooseActivity1"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name=".ui.fragment.camera.ChooseImageActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".ui.fragment.camera.EditorImageActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.CutImageActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name=".ui.fragment.camera.ClipPictureActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.ImageEditorActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.camera.CameraActivity1"
+            android:launchMode="singleTop"/>
+        <!--福利社相关activity -->
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.FuliSheDetailActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.FuliSheDetailActivity1"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.FindPointOrderActivity1"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.meishai.ui.fragment.tryuse.PointRewardCateActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name="com.meishai.ui.fragment.home.HomeTopicListActivity">
+        </activity>
+
+        <activity
+            android:name=".ui.fragment.camera.PreviewActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <activity
+            android:name=".ui.fragment.usercenter.CollectedActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.tryuse.AddressListAcitivity"/>
+        <activity
+            android:name=".ui.fragment.camera.SearchGoodsActivity"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".ui.fragment.home.MoreStarActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.home.MoreTempidActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.home.HotActionActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.home.DisCloseActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.home.MyDisCloseActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.home.DaysTopicActivity" android:launchMode="singleTop"/>
+
+        <service android:name="com.meishai.service.ReleaseService">
+        </service>
+        <service android:name=".service.LoadSplashService"/>
+
+
+        <!-- 百度定位 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="758inHAmRT4SgIusqCPqpIUW"/>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+
+        <!--百度sdk更新-->
+        <activity
+        android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+        android:exported="false"
+        android:screenOrientation="sensor"
+        android:theme="@style/bdp_update_dialog_style_fullscreen"/>
+
+        <receiver
+        android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+        android:exported="false">
+        <intent-filter>
+        <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE"/>
+        <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE"/>
+        <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS"/>
+        <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE"/>
+        </intent-filter>
+        </receiver>
+
+        <!-- 360自动更新 -->
+        <!--<service-->
+            <!--android:name="com.qihoo.appstore.updatelib.CheckUpdateService"-->
+            <!--android:exported="false"/>-->
+        <!--<activity-->
+            <!--android:name="com.qihoo.appstore.updatelib.CheckUpdateAcitivty"-->
+            <!--android:exported="false"-->
+            <!--android:theme="@android:style/Theme.Translucent"/>-->
+
+
+    </application>
+
+</manifest>

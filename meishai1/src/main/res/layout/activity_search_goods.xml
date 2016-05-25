@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.meishai.app.widget.TopBackLayout
+        android:id="@+id/search_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.meishai.app.widget.TopBackLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#929292"
+        android:text="商品搜索"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp">
+
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_red_round3"
+                android:hint="请输入商品关键词"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="30dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="#929292"
+                android:textColorHint="@color/color_cccc"
+                android:textCursorDrawable="@color/blue"/>
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="22dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:padding="3dp"
+                android:src="@drawable/search_blue"/>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/cir_red_btn_selector"
+            android:textColor="@drawable/font_white_black"
+            android:textSize="14sp"
+            android:text="搜索"
+            android:layout_marginLeft="-5dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#929292"
+        android:gravity="center"
+        android:text="热门网站"/>
+    <LinearLayout
+        android:id="@+id/search_sites"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+
+</LinearLayout>

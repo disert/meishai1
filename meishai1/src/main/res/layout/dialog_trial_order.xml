@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/lay_corners_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/lay_ct_text"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="@string/title_submit_order"
+        android:textColor="@color/txt_color" />
+
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:paddingBottom="@dimen/dis_25"
+        android:paddingTop="@dimen/dis_25" >
+
+        <com.meishai.net.volley.toolbox.NetworkImageView
+            android:id="@+id/thumb"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentLeft="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dis_30"
+            android:layout_toRightOf="@+id/thumb"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="试用编号：" />
+
+                <TextView
+                    android:id="@+id/sid"
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="745" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="邮费状态：" />
+
+                <TextView
+                    android:id="@+id/fee"
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="免邮费" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="下单价格：" />
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="10 元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="返还金额：" />
+
+                <TextView
+                    android:id="@+id/fprice"
+                    style="@style/sy_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="10 元" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/view_hor_margin_all_line" />
+
+    <EditText
+        android:id="@+id/et_orderno"
+        style="@style/edit_shape_style"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:layout_marginTop="@dimen/dis_25"
+        android:hint="在此输入订单号"
+        android:inputType="number"
+        android:maxLength="32" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:layout_marginTop="10dip"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/sy_btn_style"
+            android:background="@drawable/btn_trial_close_selector"
+            android:text="@string/app_cancel" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/sy_btn_style"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_selector"
+            android:text="@string/app_submit" />
+    </LinearLayout>
+
+</LinearLayout>

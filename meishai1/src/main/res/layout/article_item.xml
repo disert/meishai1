@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <View style="@style/view_hor_match_line"/>
+
+    <View
+        style="@style/view_place_transparent"
+        android:background="@color/main_back"/>
+
+    <View style="@style/view_hor_match_line"/>
+
+    <LinearLayout
+        android:id="@+id/article_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

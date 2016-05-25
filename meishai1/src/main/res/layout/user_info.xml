@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/app_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/user_info" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lay_back"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dis_20" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_head"
+                style="@style/lay_ct"
+                android:layout_height="71dip"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tv_head"
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="我的头像" />
+
+                <com.meishai.app.widget.CircleNetWorkImageView
+                    android:id="@+id/ib_pic"
+                    android:layout_width="58dip"
+                    android:layout_height="58dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dis_15"
+                    android:layout_toLeftOf="@+id/r_expend"
+                    android:background="@drawable/ob_db" />
+
+                <ImageButton
+                    android:id="@+id/r_expend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout
+                android:id="@+id/my_nickname"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/user_nickname" />
+
+                <TextView
+                    android:id="@+id/nickName"
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="33dip"
+                    android:layout_toLeftOf="@+id/w_expend"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/txt_color" />
+
+                <ImageButton
+                    android:id="@+id/w_expend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_30"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <LinearLayout
+                    android:id="@+id/lay_taobao"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_taobao" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <LinearLayout
+                    android:id="@+id/lay_pay"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_pay" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_30"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <LinearLayout
+                    android:id="@+id/lay_sec"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_sec" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <LinearLayout
+                    android:id="@+id/mod_pass"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_mod_pass" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_30"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <LinearLayout
+                    android:id="@+id/receive_address"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_receive_address" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <LinearLayout
+                    android:id="@+id/personal_introd"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/personal_introd" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

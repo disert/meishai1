@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_wal"
+        android:layout_width="match_parent"
+        android:layout_height="87.5dp"
+        android:background="@drawable/my_lay_selector"
+        android:clickable="true"
+        android:paddingBottom="@dimen/dis_20"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30"
+        android:paddingTop="@dimen/dis_20" >
+
+        <com.meishai.net.volley.toolbox.NetworkImageView
+            android:id="@+id/thumb"
+            android:layout_width="67.5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/img_def_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/isshare"
+            android:layout_toRightOf="@+id/thumb"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dis_15"
+            android:paddingRight="@dimen/dis_15" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_24_666_style"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="韩版夏季靓丽" />
+
+            <TextView
+                android:id="@+id/typename"
+                style="@style/text_20_CCC_style"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="福利渠道：积分兑换" />
+
+            <TextView
+                android:id="@+id/expressname"
+                style="@style/text_20_CCC_style"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="快递名称：圆通快递" />
+
+            <TextView
+                android:id="@+id/expressno"
+                style="@style/text_20_CCC_style"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="快递单号：10029123456789" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/isshare"
+            android:layout_width="58dp"
+            android:layout_height="29dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_sign_point_selector"
+            android:gravity="center"
+            android:text="晒福利"
+            android:textColor="@color/white"
+            android:textSize="13.5sp" />
+    </RelativeLayout>
+
+</LinearLayout>

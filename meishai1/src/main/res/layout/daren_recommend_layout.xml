@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/daren_root"
+
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_20"
+        android:background="@color/main_back" />
+    <View style="@style/view_hor_match_line" />
+    
+    <RelativeLayout
+        android:paddingLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView 
+            android:layout_centerVertical="true"
+            android:id="@+id/daren_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:textSize="13sp"
+            android:text="达人推荐"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/daren_icon"/>
+        <ImageView 
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/more_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/daren_more"/>
+    </RelativeLayout>
+    
+    <View style="@style/view_hor_match_line" />
+    <LinearLayout
+        android:paddingLeft="8dp"
+        android:id="@+id/daren_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+</LinearLayout>

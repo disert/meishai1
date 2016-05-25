@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.meishai"
+        minSdkVersion 9
+        targetSdkVersion 22
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']//这一行是没有的，如果我们有.so文件就需要加上这一行代码
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    productFlavors {
+
+        m1 {}
+        m2 {}
+        m3 {}
+        m4 {}
+        m5 {}
+        m6 {}
+        m7 {}
+        m8 {}
+        m9 {}
+        m10 {}
+        m11 {}
+        m12 {}
+        m13 {}
+        m14 {}
+        m15 {}
+        m16 {}
+        m17 {}
+        m18 {}
+        m19 {}
+        m20 {}
+        m21 {}
+        m22 {}
+        m23 {}
+        m24 {}
+        m25 {}
+        m26 {}
+        m27 {}
+        m28 {}
+        m29 {}
+        m30 {}
+
+        m101 {}
+        m102 {}
+        m103 {}
+        m104 {}
+        m105 {}
+        m106 {}
+        m107 {}
+        m108 {}
+        m109 {}
+        m110 {}
+        m111 {}
+        m112 {}
+        m113 {}
+        m114 {}
+        m115 {}
+        m116 {}
+        m117 {}
+        m118 {}
+        m119 {}
+        m120 {}
+        m121 {}
+        m122 {}
+        m123 {}
+        m124 {}
+        m125 {}
+        m126 {}
+        m127 {}
+        m128 {}
+        m129 {}
+        m130 {}
+        m131 {}
+        m132 {}
+        m133 {}
+        m134 {}
+        m135 {}
+        m136 {}
+        m137 {}
+        m138 {}
+        m139 {}
+        m140 {}
+        m141 {}
+        m142 {}
+        m143 {}
+        m144 {}
+        m145 {}
+        m146 {}
+        m147 {}
+        m148 {}
+        m149 {}
+        m150 {}
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+        }
+
+    }
+
+
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':oneKeyShare')
+    compile project(':instaFilterLib')
+    compile project(':bDIntegrationSDK_LibProject')
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:support-annotations:22.0.0'
+    compile 'com.google.code.gson:gson:2.3'
+//    compile files('libs/android-support-v7-recyclerview.jar')
+//    compile files('libs/json-smart-1.2.jar')
+//    compile files('libs/MobTools.jar')
+//    compile files('libs/nimbus-jose-jwt-3.3.jar')
+//    compile files('libs/nineoldandroids.jar')
+//    compile files('libs/SDKIntegration.jar')
+//    compile files('libs/ShareSDK-Core-2.6.0.jar')
+//    compile files('libs/ShareSDK-QQ-2.6.0.jar')
+//    compile files('libs/ShareSDK-QZone-2.6.0.jar')
+//    compile files('libs/ShareSDK-SinaWeibo-2.6.0.jar')
+//    compile files('libs/ShareSDK-Wechat-2.6.0.jar')
+//    compile files('libs/ShareSDK-Wechat-Core-2.6.0.jar')
+//    compile files('libs/ShareSDK-Wechat-Favorite-2.6.0.jar')
+//    compile files('libs/ShareSDK-Wechat-Moments-2.6.0.jar')
+//    compile files('libs/umeng-analytics-v5.5.3.jar')
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
+
+}

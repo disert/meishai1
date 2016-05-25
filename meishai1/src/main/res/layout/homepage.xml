@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/top_titile_style"
+        android:layout_width="match_parent" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/app_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_homepage" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dis_30"
+            android:background="@android:color/transparent"
+            android:src="@drawable/title_camera"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.meishai.app.widget.dragtop.DragTopLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- top view -->
+
+        <LinearLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/view_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homepage_back" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/view_back"
+                    android:layout_alignTop="@+id/view_back" >
+
+                    <RelativeLayout
+                        android:id="@+id/lay_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dis_20" >
+
+                        <com.meishai.app.widget.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:src="@color/white" />
+
+                        <com.meishai.app.widget.CircleImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/username"
+                        style="@style/lay_ct_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lay_head"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dis_20"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="美晒天使" />
+
+                    <TextView
+                        android:id="@+id/intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/username"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dis_10"
+                        android:ellipsize="end"
+                        android:paddingLeft="@dimen/dis_30"
+                        android:paddingRight="@dimen/dis_30"
+                        android:singleLine="true"
+                        android:text="蘑菇街达人，微博加V，闺蜜网签约达人"
+                        android:textColor="@color/color_666"
+                        android:textSize="9sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/dis_40"
+                        android:gravity="center_horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_att"
+                            style="@style/homepage_btn_style"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="@dimen/dis_90"
+                            android:layout_toLeftOf="@+id/btn_pri_msg"
+                            android:background="@drawable/btn_sign_point_selector"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_pri_msg"
+                            style="@style/homepage_btn_style"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/btn_homepage_primsg_selector"
+                            android:text="@string/homepage_pri_msg"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- content view -->
+
+        <LinearLayout
+            android:id="@+id/drag_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_back"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <com.meishai.ui.sliding.PagerSlidingTabStrip
+                    android:id="@+id/tabs"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_80" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabs" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.meishai.app.widget.dragtop.DragTopLayout>
+
+</LinearLayout>

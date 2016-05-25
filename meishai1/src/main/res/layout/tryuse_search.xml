@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_search"
+        style="@style/top_titile_style"
+        android:paddingBottom="@dimen/dis_15"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30"
+        android:paddingTop="@dimen/dis_15" >
+
+        <com.meishai.app.widget.EditTextWithDel
+            android:id="@+id/search_text"
+            style="@style/find_edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btn_cancel"
+            android:background="@drawable/rounded_edittext"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="@dimen/dis_20"
+            android:focusable="true"
+            android:hint="@string/search_input_tip"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/color_cccc"
+            android:textCursorDrawable="@color/blue" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/app_cancel" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/try_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dis_10"
+        android:layout_marginRight="@dimen/dis_10"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/dis_20"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:paddingTop="@dimen/dis_20"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/dis_20"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="#000000"
+        ptr:ptrListViewExtrasEnabled="false"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrScrollingWhileRefreshingEnabled="true"
+        ptr:ptrShowIndicator="false" />
+
+</LinearLayout>

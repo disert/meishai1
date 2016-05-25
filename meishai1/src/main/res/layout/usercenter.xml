@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user_center_title"
+        style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/backMain"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/user_my" />
+
+        <Button
+            android:id="@+id/btn_home"
+            style="@style/top_title_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_my_home" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/my_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lay_back"
+            android:orientation="vertical">
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_info"
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:background="@drawable/my_lay_selector"
+                android:clickable="true"
+                android:paddingLeft="@dimen/dis_20"
+                android:paddingRight="@dimen/dis_30" >
+
+                <com.meishai.app.widget.CircleNetWorkImageView
+                    android:id="@+id/ib_pic"
+                    android:layout_width="54dip"
+                    android:layout_height="54dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ib_pic"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@+id/ib_pic"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxWidth="120dip"
+                        android:singleLine="true"
+                        android:text="俏丽晓晓"
+                        android:textSize="@dimen/dis_30" />
+
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#777777"
+                        android:text="360积分"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white">
+                <LinearLayout
+                    android:id="@+id/vip_container"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/vip_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="V3"/>
+                    <TextView
+                        android:textColor="#929292"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:text="等级"/>
+                </LinearLayout>
+                <View style="@style/view_ver_match_line" />
+                <LinearLayout
+                    android:id="@+id/point_container"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/point_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="4000"/>
+                    <TextView
+                        android:textColor="#929292"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:text="积分"/>
+                </LinearLayout>
+                <View style="@style/view_ver_match_line" />
+                <LinearLayout
+                    android:id="@+id/meidou_container"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/meidou_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="100"/>
+                    <TextView
+                        android:textColor="#929292"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:text="美豆"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/view_hor_match_line" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/transparent"/>
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_sc"/>
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="我的收藏"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/strat_ll"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:clickable="true">
+                        <ImageView
+                            android:clickable="false"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/collected_strat"/>
+                        <TextView
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="攻略"
+                            android:textSize="11sp"
+                            android:paddingTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/special_ll"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:clickable="true">
+                        <ImageView
+                            android:clickable="false"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/collected_special"/>
+                        <TextView
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="专场"
+                            android:textSize="11sp"
+                            android:paddingTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/meiwu_ll"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:clickable="true">
+                        <ImageView
+                            android:clickable="false"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/collected_meiwu"/>
+                        <TextView
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="美物"
+                            android:textSize="11sp"
+                            android:paddingTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/meishai_ll"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:clickable="true">
+                        <ImageView
+                            android:clickable="false"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/collected_meishai"/>
+                        <TextView
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="晒晒"
+                            android:textSize="11sp"
+                            android:paddingTop="6dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_30"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_trial"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_sy"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_trial" />
+                    <ImageView
+                        android:id="@+id/try_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                    <com.meishai.app.widget.CircleTextView
+                        android:id="@+id/try_num"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_10"
+                        android:layout_toLeftOf="@+id/try_arrow"
+                        android:layout_marginTop="1.5dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_welfare"
+                    style="@style/lay_ct"
+                    android:layout_width="match_parent"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_tz"
+                        android:drawablePadding="15dip"
+                        android:gravity="center_vertical"
+                        android:text="我的福利" />
+                    <ImageView
+                        android:id="@+id/fuli_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                    <com.meishai.app.widget.CircleTextView
+                        android:id="@+id/fuli_num"
+                        android:layout_toLeftOf="@+id/fuli_arrow"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_10"
+                        android:layout_marginTop="1.5dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lay_fav"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_sc"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="我的收藏" />
+                </LinearLayout>
+
+                <!--<View style="@style/view_hor_match_line" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <!--<View style="@style/view_hor_match_line" />-->
+
+                <LinearLayout
+                    android:id="@+id/lay_money"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_zj"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_money" />
+                </LinearLayout>
+
+                <!--<View style="@style/view_hor_margin_line" />-->
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lay_point"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_point"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_point" />
+                </LinearLayout>
+
+                <!--<View style="@style/view_hor_margin_line" />-->
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lay_credit"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_xy"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_credit" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_20"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+                <RelativeLayout
+                    android:id="@+id/lay_msg"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_mes"
+                        android:drawablePadding="15dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_msg" />
+
+                    <com.meishai.app.widget.CircleTextView
+                        android:id="@+id/msg_num"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_10"
+                        android:layout_marginTop="1.5dp"
+                        android:layout_toLeftOf="@+id/arrow_2"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/arrow_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_margin_line" />
+                <RelativeLayout
+                    android:id="@+id/lay_call_our"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/call_our"
+                        android:drawablePadding="15dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_contact" />
+
+                    <com.meishai.app.widget.CircleTextView
+                        android:id="@+id/tryalert_num"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_10"
+                        android:layout_marginTop="1.5dp"
+                        android:layout_toLeftOf="@+id/arrow_1"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/arrow_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_rec_app"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/rec_app"
+                        android:drawablePadding="15dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_applink" />
+
+                    <com.meishai.app.widget.CircleTextView
+                        android:id="@+id/inbox_num"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_10"
+                        android:layout_marginTop="1.5dp"
+                        android:layout_toLeftOf="@+id/arrow_3"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/arrow_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_20"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <LinearLayout
+                    android:id="@+id/my_setting"
+                    style="@style/lay_ct"
+                    android:clickable="true" >
+
+                    <TextView
+                        style="@style/lay_ct_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/my_cf"
+                        android:drawablePadding="15dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_my_setting" />
+                </LinearLayout>
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+
+            <View style="@style/view_place_transparent" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

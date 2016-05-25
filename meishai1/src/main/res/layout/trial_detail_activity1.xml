@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/lay_top"
+        style="@style/top_titile_style"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/app_back"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="福利社详情"/>
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/share_more"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_top"
+        android:background="@color/main_back"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/fulishe_detail_data_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/meiwu_item_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fulishe_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="150dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="200dp"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/fulishe_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:paddingBottom="18dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="18dp"
+                    android:text="手提包"
+                    android:textColor="#555555"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/fulishe_detail_price_container"
+                    style="@style/sy_content_btn_style1"
+                    android:orientation="vertical"
+                    android:paddingBottom="9dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_price_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="111"
+                        android:textColor="#929292"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="价格"
+                        android:textSize="10sp"
+                        android:textColor="#999999"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#eeeeee"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/fulishe_detail_limit_container"
+                    style="@style/sy_content_btn_style1"
+                    android:orientation="vertical"
+                    android:paddingBottom="9dp"
+                    android:paddingTop="8dp">
+
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_limit_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="111"
+                        android:textColor="#929292"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="限量"
+                        android:textSize="10sp"
+                        android:textColor="#999999"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#eeeeee"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/fulishe_detail_apply_container"
+                    style="@style/sy_content_btn_style1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="9dp"
+                    android:paddingTop="8dp">
+
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_apply_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="111"
+                        android:textColor="#606060"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="申请"
+                        android:textSize="10sp"
+                        android:textColor="#999999"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <View style="@style/view_place_transparent"/>
+
+            <View style="@style/view_hor_match_line"/>
+
+
+            <LinearLayout
+                android:id="@+id/fulishe_detail_chains"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+            </LinearLayout>
+
+
+
+            <View style="@style/view_place_transparent"/>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <TextView
+                android:id="@+id/fulishe_detail_process_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:text="体验流程"/>
+
+            <View style="@style/view_hor_match_line"/>
+
+            <ImageView
+                android:id="@+id/fulishe_detail_process_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <View style="@style/view_hor_match_line"/>
+            <View style="@style/view_place_transparent"/>
+            <View style="@style/view_hor_match_line"/>
+            <TextView
+                android:id="@+id/fulishe_detail_goods_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:text="商品详情"/>
+            <View style="@style/view_hor_match_line"/>
+
+            <TextView
+                android:id="@+id/fulishe_detail_goods_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="15dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="8dp"
+                android:text="说明文字"
+                android:textColor="#555555"
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/fulishe_detail_pics"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_back"
+                android:orientation="vertical">
+
+                <View style="@style/view_hor_match_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_80"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View style="@style/view_hor_weight_line"/>
+
+                    <TextView
+                        android:id="@+id/fulishe_detail_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注意事项"
+                        android:textColor="#555555"
+                        android:textSize="12sp"/>
+
+                    <View style="@style/view_hor_weight_line"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fulishe_detail_notice_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis_30"
+                    android:layout_marginRight="@dimen/dis_30"
+                    android:background="@drawable/cir_back_white"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+                <View style="@style/view_hor_match_line"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View style="@style/view_hor_match_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/main_back"
+            android:paddingLeft="10dp">
+
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/end_time"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/fulishe_detail_endday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="距离结束:10天"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:textSize="8sp"/>
+
+            <Button
+                android:id="@+id/fulishe_detail_buy_btn"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/fulishe_detail_apply_btn"
+                android:background="@drawable/cir_yellow_btn_selector"
+                android:clickable="true"
+                android:text="直接购买"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/fulishe_detail_apply_btn"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/cir_purple_btn_selector"
+                android:clickable="true"
+                android:text="申请试用"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <View style="@style/view_hor_match_line"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@drawable/my_lay_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30" >
+
+        <com.meishai.app.widget.CircleNetWorkImageView
+            android:id="@+id/avatar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/dis_15"
+            android:layout_marginRight="@dimen/dis_15"
+            android:layout_toLeftOf="@+id/lay_right"
+            android:layout_toRightOf="@+id/avatar"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:text="美晒天使"
+                    android:textColor="@color/master_username_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/areaname"
+                    style="@style/find_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis_30"
+                    android:ellipsize="end"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:text="（广东省 深圳市）" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="美就大胆晒出来美就大胆晒出来美就大胆晒出来美就大胆晒出来美就大胆晒出来"
+                android:textColor="@color/color_77"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <TextView
+                    android:id="@+id/post_num"
+                    style="@style/find_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="帖子：123" />
+
+                <TextView
+                    android:id="@+id/fans_num"
+                    style="@style/find_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis_30"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="粉丝：3221" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/attention_green"
+                android:text="@string/plus_attention"
+                android:textColor="#00CD00"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_no_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/attention_gray"
+                android:text="@string/has_attention"
+                android:textColor="@color/txt_color"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

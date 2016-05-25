@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/lay_corners_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/lay_ct_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_100"
+        android:gravity="center"
+        android:text="提示"
+        android:textColor="@color/master_username_color" />
+
+    <View
+        style="@style/view_hor_match_line"
+        android:background="#D5D5D5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingBottom="@dimen/dis_15"
+        android:paddingLeft="@dimen/dis_30"
+        android:paddingRight="@dimen/dis_30"
+        android:paddingTop="@dimen/dis_30" >
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="美晒发布新版本啦，快快去升级^_^"
+            android:textColor="@color/master_username_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_hor_match_line"
+        android:background="#D5D5D5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_100"
+        android:gravity="center_horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lay_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="暂不升级"
+                android:textColor="#555555" />
+
+            <View
+                style="@style/view_ver_match_line"
+                android:background="#D5D5D5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_upgrade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <View
+                style="@style/view_ver_match_line"
+                android:background="#D5D5D5" />
+
+            <Button
+                android:id="@+id/btn_upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="马上升级"
+                android:textColor="#FF5577" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

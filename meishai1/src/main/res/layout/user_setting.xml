@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/app_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_setting" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_clear_cache"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="清空缓存" />
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:id="@+id/lay_cache_memory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="已经使用0M"
+                    android:textColor="@color/text_color" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:id="@+id/lay_pop"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_help" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_pro"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_protocol" />
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/work_qq"
+                    android:textColor="@color/text_color"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_about"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_about" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    style="@style/lay_ct_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/dis_10"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_color" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_contact"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_contact" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_30"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_score_award" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <LinearLayout
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_version" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_30"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:id="@+id/lay_rec"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/lay_ct_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_applink" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/button_height_90"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dis_30"
+            android:background="@drawable/btn_rect_selector"
+            android:text="@string/app_exit" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/top_titile_style"
+        android:layout_width="match_parent" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/shaishai" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_shaishai_cate" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dis_20" >
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            style="@style/lay_ct_input"
+            android:background="@color/white" >
+
+            <EditText
+                android:id="@+id/search_text"
+                style="@style/find_edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="@dimen/dis_20"
+                android:hint="@string/shaishai_cate_search_input_tip"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@color/color_cccc" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dis_20"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="@dimen/dis_150"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!-- 分类项 -->
+
+                    <ListView
+                        android:id="@+id/cate_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@null"
+                        android:fadingEdge="none"
+                        android:scrollbars="none" />
+
+                    <!-- 右边分隔线 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true" >
+
+                        <View
+                            style="@style/view_ver_match_line"
+                            android:layout_alignParentRight="true" >
+                        </View>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/right_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@null"
+                        android:fadingEdge="none"
+                        android:scrollbars="none" />
+
+                    <ListView
+                        android:id="@+id/right_topic_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@null"
+                        android:fadingEdge="none"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

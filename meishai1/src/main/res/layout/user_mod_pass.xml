@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/app_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_mod_pass" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/top_title_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_save" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout style="@style/lay_ct_input" >
+
+                <TextView
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_old_pass" />
+
+                <EditText
+                    android:id="@+id/oldPwd"
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dis_50"
+                    android:background="@android:color/transparent"
+                    android:hint="没有旧密码可不填写"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <LinearLayout style="@style/lay_ct_input" >
+
+                <TextView
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_new_pass" />
+
+                <EditText
+                    android:id="@+id/newPwd"
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dis_50"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_new_pass_tip"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <LinearLayout style="@style/lay_ct_input" >
+
+                <TextView
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_again_new_pass" />
+
+                <EditText
+                    android:id="@+id/newPwdRepit"
+                    style="@style/lay_ct_text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:background="@android:color/transparent"
+                    android:hint="请再次输入新密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

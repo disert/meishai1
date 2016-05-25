@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/app_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/release" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/top_title_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/publish" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/main_back"
+            android:orientation="vertical" >
+
+            <zhaohg.emojiview.EmojiEditText
+                android:id="@+id/release_edit"
+                android:layout_width="match_parent"
+                android:layout_height="105dip"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:hint="@string/release_input_tip"
+                android:inputType="textMultiLine"
+                android:paddingLeft="@dimen/dis_30"
+                android:paddingTop="@dimen/dis_30"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccc"
+                android:textSize="@dimen/size_30" />
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dis_30"
+                android:paddingRight="@dimen/dis_30" >
+
+                <com.meishai.app.widget.horizontalscrollview.MyRecyclerView
+                    android:id="@+id/camera_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_170"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="bottom"
+                    android:paddingRight="@dimen/dis_10"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                android:id="@+id/lay_choose_cate"
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/release_text_666_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="选择分类（必选）" />
+
+                <TextView
+                    android:id="@+id/txt_cate"
+                    style="@style/release_text_999_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dis_15"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout style="@style/lay_ct" >
+
+                <TextView
+                    android:id="@+id/areaname"
+                    style="@style/release_text_999_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/release_localtion"
+                    android:drawablePadding="@dimen/dis_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/location_hide" />
+
+                <ImageButton
+                    android:id="@+id/chk_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/release_localtion_hide" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <RelativeLayout
+                style="@style/lay_ct"
+                android:background="#FEFEFE" >
+
+                <ImageButton
+                    android:id="@+id/ig_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/release_bq_selector" />
+
+                <ImageButton
+                    android:id="@+id/ig_toggle_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/down" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+
+          <!--   <zhaohg.emojiview.EmojiViewEx
+                android:id="@+id/emojiView"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="#EEEEEE"
+                emoji:categoryHeight="40dp"
+                emoji:indicatorDotsColor="#222222" /> -->
+
+            <LinearLayout
+                android:id="@+id/send_tool_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/add_tool"
+                    layout="@layout/send_msg_tool"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dis_15"
+    android:paddingTop="@dimen/dis_15" >
+
+    <ImageView
+        android:id="@+id/thumb_iv"
+        android:layout_width="@dimen/dis_100"
+        android:layout_height="@dimen/dis_100"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:background="@color/post_pic_back" />
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:src="@drawable/right_arrow" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/thumb_iv"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@id/right_iv"
+        android:layout_toRightOf="@id/thumb_iv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_tv"
+        android:layout_marginTop="12dip"
+        android:layout_toRightOf="@id/thumb_iv"
+        android:textColor="@color/title_bg"
+        android:textSize="10sp" />
+
+</RelativeLayout>

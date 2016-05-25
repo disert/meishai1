@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/lay_other_line"
+        style="@style/view_hor_match_line"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/taobao_add"
+            style="@style/lay_ct"
+            android:clickable="true" >
+
+            <TextView
+                style="@style/lay_ct_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/taobao_plus"
+                android:drawablePadding="3dip"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/title_taobao_add" />
+
+            <TextView
+                style="@style/lay_ct_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/right_arrow"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="最多绑定5个"
+                android:textColor="@color/txt_color" />
+        </RelativeLayout>
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+</LinearLayout>

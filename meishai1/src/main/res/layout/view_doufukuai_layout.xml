@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+    <!--底部的分隔布局-->
+    <LinearLayout
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            style="@style/view_place_transparent"
+            android:background="#eeeeee"/>
+
+        <View style="@style/view_hor_match_line"/>
+    </LinearLayout>
+
+    <!-- 标题 更多这一栏的根布局-->
+    <LinearLayout
+        android:id="@+id/title_root"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dis_15"
+        android:paddingRight="@dimen/dis_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门话题1"
+                android:textColor="#555555"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/title_more"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/tv_selector"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more_right_arrow"
+                android:text="更多1"
+                android:textColor="#555555"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_center"
+        style="@style/view_hor_match_line"/>
+
+    <!-- 内容显示部分-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerPadding="0dp"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dis_16"
+            android:paddingTop="@dimen/dis_16">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.meishai.app.widget.layout.NoScrollGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:numColumns="2"
+        android:paddingLeft="4dp"
+        android:id="@+id/content_grid">
+
+    </com.meishai.app.widget.layout.NoScrollGridView>
+
+    <!-- 更多 -->
+    <LinearLayout
+        android:id="@+id/more_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_selector"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <View style="@style/view_hor_match_line"/>
+
+        <TextView
+            android:id="@+id/more_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="查看更多"/>
+
+        <View style="@style/view_hor_match_line"/>
+    </LinearLayout>
+
+
+</LinearLayout>

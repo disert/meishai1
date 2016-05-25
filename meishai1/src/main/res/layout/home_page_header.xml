@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/header_root"
+    android:background="@drawable/homepage_back" >
+
+    <ImageButton
+        android:id="@+id/image_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dis_10"
+        android:layout_marginTop="@dimen/dis_20"
+        android:background="@android:color/transparent"
+        android:src="@drawable/message" />
+
+    <RelativeLayout
+        android:id="@+id/lay_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dis_20" >
+
+        <com.meishai.app.widget.CircleImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:src="@color/white" />
+
+        <com.meishai.app.widget.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dis_20"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="美晒天使"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/lay_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="@dimen/dis_10"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/att_num"
+            android:text="关注"
+            android:textColor="@color/color_666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/att_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/dis_90"
+            android:layout_toLeftOf="@+id/fans"
+            android:text="23"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="粉丝"
+            android:textColor="@color/color_666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/fans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/fans"
+            android:text="23"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_att"
+        style="@style/homepage_btn_style"
+        android:layout_width="150dp"
+        android:layout_below="@id/lay_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dis_20"
+        android:background="@drawable/btn_sign_point_selector"
+        android:text="关注" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_att"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/dis_20"
+        android:text="广东 深圳"
+        android:textColor="@color/color_666"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:layout_margin="5dp"
+        android:text="剁手党联盟盟主"
+        android:textColor="@color/color_666"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:top_back_attr="http://schemas.android.com/apk/res/com.meishai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.meishai.app.widget.TopBackLayout
+        android:id="@+id/back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        top_back_attr:backText="@string/shaishai"
+        top_back_attr:titleText="@string/channel" />
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+        android:id="@+id/channel_pick_listivew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_color"
+        android:dividerHeight="0.5dip"
+        android:scrollbarStyle="outsideOverlay"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip"/>
+
+</LinearLayout>

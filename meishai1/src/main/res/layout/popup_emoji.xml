@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emoji="http://schemas.android.com/apk/res/com.meishai"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <View style="@style/view_hor_match_line" />
+
+        <RelativeLayout
+            android:id="@+id/lay_emoji"
+            style="@style/lay_ct"
+            android:background="#FEFEFE" >
+
+            <ImageButton
+                android:id="@+id/ig_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/release_bq_selector" />
+
+            <ImageButton
+                android:id="@+id/ig_toggle_input"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/down" />
+        </RelativeLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <zhaohg.emojiview.EmojiViewEx
+            android:id="@+id/emojiView"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#EEEEEE"
+            emoji:categoryHeight="40dp"
+            emoji:indicatorDotsColor="#222222" />
+    </LinearLayout>
+
+</LinearLayout>

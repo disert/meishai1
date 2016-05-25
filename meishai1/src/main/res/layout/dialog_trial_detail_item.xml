@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sy_process"
+        style="@style/lay_ct_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_75"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:layout_marginRight="@dimen/dis_30"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"/>
+
+    <View style="@style/view_hor_margin_all_line" />
+
+</LinearLayout>

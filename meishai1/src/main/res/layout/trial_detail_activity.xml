@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_top"
+        style="@style/top_titile_style"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/backMain"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/app_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="@string/try_detail" />
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/share_more" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_top"
+        android:background="@color/main_back"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/data_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/meiwu_item_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/trial_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:minHeight="200dp" />
+
+                <TextView
+                    android:id="@+id/trial_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/meiwu_tv_back"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="手提包"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_90"
+                    android:paddingLeft="@dimen/dis_30" >
+
+                    <TextView
+                        android:id="@+id/trial_detail_snum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="限制量5份"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dis_35"
+                        android:layout_toRightOf="@+id/trial_detail_snum"
+                        android:text="价值60元"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_35"
+                        android:background="@drawable/cir_btn_selector"
+                        android:text="查看是否中奖"
+                        android:textColor="#25c5dd"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_promise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis_35"
+                        android:drawableLeft="@drawable/promise_money"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="担保金"
+                        android:textColor="#555555"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View style="@style/view_hor_margin_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_90"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dis_30" >
+
+                    <TextView
+                        android:id="@+id/trial_detail_sponsor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="赞助商:"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/trial_detail_sponsor_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dis_60"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/trial_detail_sponsor"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_sponsor_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dis_60"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/trial_detail_sponsor"
+                        android:gravity="center_vertical"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_sponsor_detail"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:paddingRight="12dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/trial_detail_users_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View style="@style/view_hor_match_line" />
+
+                    <View style="@style/view_place_transparent"
+                        android:background="@color/main_back"/>
+
+                    <View style="@style/view_hor_match_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dis_90"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dis_30" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="申请会员"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/trial_detail_users_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:drawablePadding="5dp"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:text="更多"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View style="@style/view_hor_match_line" />
+
+                    <com.meishai.app.widget.ScrollGridView
+                        android:layout_margin="@dimen/dis_20"
+                        android:id="@+id/trial_detail_users_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="5dp"
+                        android:numColumns="10"
+                        android:verticalSpacing="15dp" >
+                    </com.meishai.app.widget.ScrollGridView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/view_hor_match_line" />
+
+            <View style="@style/view_place_transparent" />
+
+            <View style="@style/view_hor_match_line" />
+            <TextView
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:layout_marginLeft="@dimen/dis_10"
+                android:layout_marginRight="@dimen/dis_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/dis_10"
+                android:textColor="#555555"
+                android:text="说明文字"
+                android:textSize="10dp"/>
+            <LinearLayout
+                android:id="@+id/trial_detail_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_back"
+                android:orientation="vertical" >
+
+                <View style="@style/view_hor_match_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis_80"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <View style="@style/view_hor_weight_line" />
+
+                    <TextView
+                        android:id="@+id/trial_detail_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注意事项"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <View style="@style/view_hor_weight_line" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/trial_detail_notice_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis_30"
+                    android:layout_marginRight="@dimen/dis_30"
+                    android:background="@android:color/white"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textColor="#999999"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <View style="@style/view_hor_match_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View style="@style/view_hor_match_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/main_back"
+            android:paddingLeft="@dimen/dis_30" >
+
+            <TextView
+                android:id="@+id/trial_detail_appnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis_10"
+                android:drawableLeft="@drawable/people"
+                android:drawablePadding="@dimen/dis_10"
+                android:text="参与:28852人"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/trial_detail_endday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dis_10"
+                android:drawableLeft="@drawable/end_time"
+                android:drawablePadding="@dimen/dis_10"
+                android:text="距离结束:10天"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/trial_detail_control_btn"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis_30"
+                android:background="@drawable/cir_red_btn_selector"
+                android:clickable="true"
+                android:text="申请试用"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/meiwu_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="8dp" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_20"
+        android:background="@color/main_back" />
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/meiwu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_10"
+            android:layout_marginBottom="@dimen/dis_10"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/meiwu_icon"
+            android:drawablePadding="8dp"
+            android:text="美物推荐"
+            android:textColor="#555555"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/meiwu_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/more_right_arrow" />
+    </RelativeLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/meiwu_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis_20"
+        android:background="@color/main_back" />
+
+</LinearLayout>

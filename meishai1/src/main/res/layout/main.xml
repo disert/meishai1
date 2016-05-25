@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#dddddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lay_back"
+        android:orientation="horizontal"
+        android:paddingTop="5dip" >
+
+        <LinearLayout
+            android:id="@+id/tab_home_container"
+            android:layout_width="0.0dip"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tab_home_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/photo_show_selector" />
+
+            <TextView
+                android:id="@+id/tab_home_tv"
+                style="@style/bottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/shaishai" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_find_container"
+            android:layout_width="0.0dip"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tab_find_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/meiwu_selector" />
+
+            <TextView
+                android:id="@+id/tab_find_tv"
+                style="@style/bottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/meiwu" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tab_camer_tv"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:adjustViewBounds="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/camer" />
+
+        <LinearLayout
+            android:id="@+id/tab_try_container"
+            android:layout_width="0.0dip"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tab_try_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/try_selector" />
+
+            <TextView
+                android:id="@+id/tab_try_tv"
+                style="@style/bottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/fuli" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_user_container"
+            android:layout_width="0.0dip"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tab_user_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/user_selector" />
+
+            <TextView
+                android:id="@+id/tab_user_tv"
+                style="@style/bottom_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/user_my" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

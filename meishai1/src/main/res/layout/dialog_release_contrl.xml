@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_text_color"
+        android:orientation="vertical"
+        android:padding="@dimen/dis_45" >
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis_80"
+            android:background="@drawable/btn_white_selector"
+            android:textColor="#ff5577"
+            android:text="删除图片" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis_80"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@drawable/btn_white_selector"
+            android:text="编辑图片" />
+        <Button
+            android:id="@+id/btn_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis_80"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@drawable/btn_white_selector"
+            android:text="设为封面" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hei_90"
+            android:layout_marginTop="@dimen/dis_45"
+            android:background="@drawable/btn_gray_selector"
+            android:text="@string/app_cancel"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

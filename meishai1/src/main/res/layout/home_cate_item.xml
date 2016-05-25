@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lay_cate_item"
+    android:clickable="true"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 分类项 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true" >
+
+        <Button
+            android:id="@+id/name"
+            style="@style/shaishai_cate_btn_style"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_shaishai_cate_selector"
+            android:text="推荐" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+
+            <View
+                style="@style/view_ver_match_line"
+                android:layout_above="@+id/cate_right"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/cate_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cate_right" />
+
+            <View
+                style="@style/view_ver_match_line"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cate_right" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

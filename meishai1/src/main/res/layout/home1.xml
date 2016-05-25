@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_top"
+        style="@style/top_titile_style" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/pick_root"
+                android:layout_width="72dp"
+                android:layout_height="45dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/btn_pick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dis_10"
+                    android:textColor="@color/txt_save"
+                    android:text="精选"
+                    android:textSize="@dimen/subhead_text_size" />
+
+                <View
+                    android:id="@+id/pick_line"
+                    style="@style/view_hor_match_line"
+                    android:layout_marginTop="@dimen/dis_10"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dis_10"
+                    android:layout_marginLeft="@dimen/dis_10"
+                    android:layout_marginRight="@dimen/dis_10"
+                    android:background="@color/txt_save" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/att_root"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dis_30" >
+
+                <TextView
+                    android:id="@+id/btn_attent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dis_10"
+                    android:text="发现"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/subhead_text_size" />
+
+                <View
+                    android:id="@+id/attent_line"
+                    style="@style/view_hor_match_line"
+                    android:layout_marginTop="@dimen/dis_10"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dis_10"
+                    android:layout_marginLeft="@dimen/dis_10"
+                    android:layout_marginRight="@dimen/dis_10"
+                    android:background="@color/txt_save"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ib_cate"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dis_10"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:paddingBottom="14dp"
+            android:src="@drawable/cate_selector" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

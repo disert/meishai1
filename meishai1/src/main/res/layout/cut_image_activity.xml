@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+        <com.meishai.app.widget.layout.CropImageView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:initialFrameScale="1.0"
+            custom:backgroundColor="#55ffffff"
+            custom:cropMode="ratio_1_1" />
+    </LinearLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/cut_image_back"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:src="@drawable/cancel_x"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/cut_image_next"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/cut_next"
+            android:background="@drawable/btn_red_selector" />
+    </RelativeLayout>
+
+</LinearLayout>

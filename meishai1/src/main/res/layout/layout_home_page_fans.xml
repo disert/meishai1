@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View style="@style/view_hor_match_line"/>
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.meishai.app.widget.RoundCornerImageView
+            android:id="@+id/home_page_head_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_shape"
+            android:scaleType="centerCrop"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_page_head_avatar">
+
+            <TextView
+                android:id="@+id/home_page_head_nicename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="xxx"
+                android:layout_centerVertical="true"
+                android:textColor="#555555"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/home_page_head_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/home_page_head_nicename"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="V1会员"
+                android:textSize="8sp"
+                android:background="#d34567"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_page_head_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_marginTop="@dimen/dis_10"
+            android:layout_toRightOf="@id/home_page_head_avatar"
+            android:paddingLeft="5dp"
+            android:text="zzz"
+            android:textColor="#999999"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="10sp"/>
+        <ImageView
+            android:id="@+id/home_page_head_attention"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_attention_yes"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

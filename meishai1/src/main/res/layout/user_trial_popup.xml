@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_color" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lay_ing"
+            style="@style/lay_ct"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/trial_filter_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进行中" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:id="@+id/lay_dtj"
+            style="@style/lay_ct"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/trial_filter_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单待提交" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:id="@+id/lay_bgdtj"
+            style="@style/lay_ct"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/trial_filter_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报告待提交" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:id="@+id/lay_dbj"
+            style="@style/lay_ct"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/trial_filter_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="担保金待申请" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:id="@+id/lay_cacel"
+            style="@style/lay_ct"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/trial_filter_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+    </LinearLayout>
+
+</RelativeLayout>

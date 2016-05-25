@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/top_titile_style" >
+
+        <Button
+            android:id="@+id/btn_find"
+            style="@style/top_title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back_arrow_white"
+            android:drawablePadding="3dp"
+            android:text="@string/find" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/top_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/earn_points" />
+
+        <Button
+            android:id="@+id/btn_point_exchange"
+            style="@style/top_title_button_rgiht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/find_point_exchange" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_back"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:background="@color/white"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_sign_point_selector"
+                android:text="@string/find_sign_txt"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View style="@style/view_hor_match_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis_20"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <View style="@style/view_hor_match_line" />
+
+            <LinearLayout
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/find_eran_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="做任务，赚积分" />
+            </LinearLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/find_eran_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/find_follow_weixin"
+                    android:drawablePadding="@dimen/dis_15"
+                    android:gravity="center_vertical"
+                    android:text="关注微信" />
+
+                <TextView
+                    style="@style/find_eran_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dis_15"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:text="+100积分"
+                    android:textColor="@color/title_bg" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_margin_line" />
+
+            <RelativeLayout
+                style="@style/lay_ct"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/find_eran_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/find_follow_qq"
+                    android:drawablePadding="@dimen/dis_15"
+                    android:gravity="center_vertical"
+                    android:text="关注QQ空间" />
+
+                <TextView
+                    style="@style/find_eran_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/dis_15"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:text="+100积分"
+                    android:textColor="@color/title_bg" />
+            </RelativeLayout>
+
+            <View style="@style/view_hor_match_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+
+
+        <com.meishai.app.widget.EditTextWithDel
+            android:id="@+id/search"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:textColor="#999999"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edittext"
+            android:hint="搜索晒晒/攻略/美物"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="30dp"
+            android:singleLine="true"
+            android:textColorHint="@color/color_cccc"
+            android:textCursorDrawable="@color/blue"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="22dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="3dp"
+            android:src="@drawable/home_search"/>
+
+    </RelativeLayout>
+
+    <com.meishai.app.widget.layout.AutoScrollLayout
+        android:visibility="visible"
+        android:id="@+id/autoScrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.meishai.app.widget.layout.AutoScrollLayout>
+
+</LinearLayout>

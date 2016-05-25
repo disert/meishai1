@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View style="@style/view_hor_match_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_lay_selector"
+        android:descendantFocusability="blocksDescendants"
+        android:paddingLeft="@dimen/dis_20"
+        android:paddingRight="@dimen/dis_20"
+        android:paddingTop="@dimen/dis_20" >
+
+        <com.meishai.net.volley.toolbox.NetworkImageView
+            android:id="@+id/pic_phone"
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="0.5dp"
+            android:paddingRight="0.5dp"
+            android:paddingTop="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/lay_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pic_phone"
+            android:paddingBottom="@dimen/dis_10"
+            android:paddingLeft="@dimen/dis_10"
+            android:paddingRight="@dimen/dis_10" >
+
+            <LinearLayout
+                android:id="@+id/lay_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dis_20"
+                android:layout_marginTop="@dimen/dis_20"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_daren"
+                    style="@style/btn_daren_style"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="韩版"
+                    android:textColor="@color/master_username_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lay_view"
+                style="@style/view_hor_match_line"
+                android:layout_below="@+id/lay_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis_60"
+                android:layout_below="@+id/lay_view" >
+
+                <TextView
+                    android:id="@+id/allnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="限量：0份"
+                    android:textColor="@color/master_username_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/appnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis_20"
+                    android:layout_toRightOf="@+id/allnum"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="参与：0人"
+                    android:textColor="@color/master_username_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/endday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="距离结束：15天"
+                    android:textColor="@color/master_username_color"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/view_hor_match_line" />
+
+</LinearLayout>

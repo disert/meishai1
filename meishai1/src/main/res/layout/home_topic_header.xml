@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.meishai.app.widget.RoundCornerImageView
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dis_30"
+        android:id="@+id/home_topic_header_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/place_default"
+        android:adjustViewBounds="true"/>
+        <RelativeLayout
+            android:id="@+id/home_topic_header_ll"
+            android:layout_toRightOf="@id/home_topic_header_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis_10">
+            <TextView
+                android:id="@+id/home_topic_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:text="双11不剁手"/>
+            <TextView
+                android:id="@+id/home_topic_header_attention"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:textColor="@drawable/tv_attention_color_selector"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis_30"
+                android:background="@drawable/tv_attention_selector"
+                android:text="关注" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_topic_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_topic_header_img"
+            android:layout_below="@id/home_topic_header_ll"
+            android:layout_marginLeft="8dp"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:text="双11不剁手"/>
+
+
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/home_topic_header_desc"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="7dp"
+        android:ellipsize="end"
+        android:textColor="#555555"
+        android:textSize="@dimen/dis_24"/>
+    
+	<View style="@style/view_hor_match_line" />
+</LinearLayout>
