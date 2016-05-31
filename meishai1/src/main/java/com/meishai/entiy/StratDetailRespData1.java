@@ -16,12 +16,11 @@ public class StratDetailRespData1 extends BaseRespData {
     public ShareData sharedata;
     public StratDetailRespData.HeadData topicdata;
     public StratDetailRespData.Welfare welfare;
-    public String page_title;//	排行详情页
 
     /**
      * 新的item部分的信息
      */
-    public class stratDetailItem {
+    public static class stratDetailItem {
         public String button_text;//	去购买!
         public String content;//	“以油制油”，通常我们用的粉底液，粉底霜，油性的眼影都含有高量油脂，卸妆油能轻易和脸上的彩妆融合，再以水乳方式彻底溶解彩妆。现在的卸妆油更突破了以往的矿物油成分，用植物油代替更能够清除彩妆，安全无刺激。注意的是，由于它比较油腻，偏油性皮肤的妹纸使用可能会引起闭合性粉刺哦。适用人群：中干性皮肤，每天都有完整上妆习惯的和经常化妆的妹纸。
         public String content_color;
@@ -31,7 +30,7 @@ public class StratDetailRespData1 extends BaseRespData {
         public int ispromise;//	0
         public int istao;//	0
         public String itemurl;
-        public int pid;//	110218
+        public long pid;//	110218
         public String price;//	价格:0元
         public String title;//	油状卸妆品
         public String title_color;

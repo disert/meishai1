@@ -1,8 +1,5 @@
 package com.meishai.ui.fragment.meiwu;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,11 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import cn.sharesdk.framework.Platform;
-import cn.sharesdk.framework.PlatformActionListener;
-import cn.sharesdk.wechat.friends.Wechat;
-import cn.sharesdk.wechat.moments.WechatMoments;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -43,7 +35,15 @@ import com.meishai.util.DebugLog;
 import com.meishai.util.GsonHelper;
 import com.meishai.util.PullToRefreshHelper;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
+
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.wechat.friends.Wechat;
+import cn.sharesdk.wechat.moments.WechatMoments;
 
 /**
  * 商品详情
@@ -55,7 +55,7 @@ public class MeiWuGoodsDetailActivity extends BaseActivity {
 
     private PullToRefreshListView mRefreshListView;
     private GoodsDetailAdapter mAdapter;
-    private int mPid;
+    private long mPid;
     private Button mBackMain;
     private ImageButton mMore;
 
@@ -72,7 +72,7 @@ public class MeiWuGoodsDetailActivity extends BaseActivity {
     private ShareMorePopupWindow sharePop;
     private LinearLayout mLayRoot;
 
-    public static Intent newIntent(int pid) {
+    public static Intent newIntent(long pid) {
         Intent intent = new Intent(GlobalContext.getInstance()
                 .getApplicationContext(), MeiWuGoodsDetailActivity.class);
         intent.putExtra("pid", pid);
@@ -194,7 +194,7 @@ public class MeiWuGoodsDetailActivity extends BaseActivity {
         mCollect = (ImageView) findViewById(R.id.collect);
         mBuy = (Button) findViewById(R.id.buy);
 
-        mPid = getIntent().getIntExtra("pid", 0);
+        mPid = getIntent().getLongExtra("pid", 0);
 
     }
 

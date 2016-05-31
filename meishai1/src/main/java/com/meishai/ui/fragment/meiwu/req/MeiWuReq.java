@@ -1,18 +1,11 @@
 package com.meishai.ui.fragment.meiwu.req;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.meishai.GlobalContext;
 import com.meishai.R;
@@ -20,9 +13,9 @@ import com.meishai.dao.MeiShaiSP;
 import com.meishai.entiy.UserInfo;
 import com.meishai.net.ReqData;
 import com.meishai.net.volley.RequestQueue;
-import com.meishai.net.volley.VolleyError;
 import com.meishai.net.volley.Response.ErrorListener;
 import com.meishai.net.volley.Response.Listener;
+import com.meishai.net.volley.VolleyError;
 import com.meishai.net.volley.toolbox.StringRequest;
 import com.meishai.ui.fragment.MeishaiWebviewActivity;
 import com.meishai.ui.fragment.usercenter.LoginActivity;
@@ -30,6 +23,12 @@ import com.meishai.util.AndroidUtil;
 import com.meishai.util.DebugLog;
 import com.meishai.util.PackageManagerUtils;
 import com.nimbusds.jose.JOSEException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MeiWuReq {
 
@@ -433,7 +432,7 @@ public class MeiWuReq {
      * @param listener
      * @param errorListener
      */
-    public static void commodDetailsReq(int pid, Listener<String> listener,
+    public static void commodDetailsReq(long pid, Listener<String> listener,
                                         ErrorListener errorListener) {
         UserInfo userInfo = MeiShaiSP.getInstance().getUserInfo();
         ReqData reqData = new ReqData();
@@ -528,7 +527,7 @@ public class MeiWuReq {
      * @param listener
      * @param errorListener
      */
-    public static void collect(int pid, Listener<String> listener,
+    public static void collect(long pid, Listener<String> listener,
                                ErrorListener errorListener) {
         UserInfo userInfo = MeiShaiSP.getInstance().getUserInfo();
         if (!userInfo.isLogin()) {
@@ -594,7 +593,7 @@ public class MeiWuReq {
      * @param listener
      * @param errorListener
      */
-    public static void buy(int pid, Listener<String> listener,
+    public static void buy(long pid, Listener<String> listener,
                            ErrorListener errorListener) {
         UserInfo userInfo = MeiShaiSP.getInstance().getUserInfo();
         // if(!userInfo.isLogin()){
@@ -869,7 +868,7 @@ public class MeiWuReq {
     }
 
 
-    public static void buyReq(final Context context, int pid, final String url,
+    public static void buyReq(final Context context, long pid, final String url,
                               final int istao) {
 
 
