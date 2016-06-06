@@ -1,14 +1,6 @@
 package com.meishai.ui.fragment.home;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Message;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,23 +13,29 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.meishai.R;
+import com.meishai.app.widget.layout.TopView;
 import com.meishai.dao.MeiShaiSP;
 import com.meishai.entiy.HomeInfo;
+import com.meishai.entiy.ReleaseData;
 import com.meishai.entiy.UserInfo;
 import com.meishai.net.ReqData;
-import com.meishai.net.volley.Response.ErrorListener;
-import com.meishai.net.volley.Response.Listener;
-import com.meishai.net.volley.VolleyError;
-import com.meishai.net.volley.toolbox.StringRequest;
 import com.meishai.ui.base.BaseFragment;
+import com.meishai.ui.constant.ConstantSet;
+import com.meishai.ui.fragment.camera.ChooseImageActivity;
 import com.meishai.ui.fragment.home.adapter.HomeListAdapter;
+import com.meishai.ui.fragment.meiwu.SearchActivity;
 import com.meishai.util.AndroidUtil;
 import com.meishai.util.CacheConfigUtils;
 import com.meishai.util.DebugLog;
-import com.meishai.util.DiskImageCacheUtil;
 import com.meishai.util.GsonHelper;
 import com.meishai.util.PullToRefreshHelper;
 import com.nimbusds.jose.JOSEException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 主页精选所对应的fragment
@@ -72,14 +70,16 @@ public class HandPickFragment extends BaseFragment {
                     false);
             initView(mRootView);
             mListView.setVisibility(View.INVISIBLE);
-            // getRequestData(1);
+             getRequestData(1);
         }
 
 
         return mRootView;
     }
 
+
     private void initView(View v) {
+        initTopView(v);
         mListView = (PullToRefreshListView) v
                 .findViewById(R.id.home_timeline_listview);
         mListView.setMode(Mode.PULL_FROM_START);
@@ -145,6 +145,32 @@ public class HandPickFragment extends BaseFragment {
             }
         });
 
+    }
+    private TopView mTopView;
+    private void initTopView(View v) {
+        mTopView = (TopView) v.findViewById(R.id.top_view);
+        mTopView.setVisibility(View.VISIBLE);
+        mTopView.setBackImageVisibility(View.VISIBLE);
+        mTopView.setMoreImageVisibility(View.VISIBLE);
+        mTopView.setTitle("美晒");
+        mTopView.setBackImageResource(R.drawable.search);
+        mTopView.setMoreImageResource(R.drawable.camer);
+        mTopView.setBackImageOnclickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                //搜索
+                startActivity(SearchActivity.newIntent(SearchActivity.TYPE_SHAISHAI));
+            }
+        });
+        mTopView.setMoreImageOnclickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                //发晒晒
+                startActivity(ChooseImageActivity.newIntent(new ReleaseData(), ConstantSet.MAX_IMAGE_COUNT));
+            }
+        });
     }
 
     /**

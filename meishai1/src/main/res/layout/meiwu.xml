@@ -4,58 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/lay_top"
-        style="@style/top_titile_style">
-
-        <com.meishai.app.widget.EditTextWithDel
-            android:id="@+id/search_et"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="7dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="7dp"
-            android:background="@drawable/bg_round_e71e46"
-            android:focusable="false"
-            android:hint="搜索晒晒/攻略/美物"
-            android:imeOptions="actionSearch"
-            android:inputType="text"
-            android:paddingLeft="30dp"
-            android:singleLine="true"
-            android:textColor="#999999"
-            android:textColorHint="#ffffff"
-            android:textCursorDrawable="@color/blue"
-            android:textSize="11sp"/>
-
-        <ImageView
-            android:id="@+id/search_icon"
-            android:layout_width="22dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:padding="3dp"
-            android:src="@drawable/search_icon_white"/>
-
-        <TextView
-            android:id="@+id/title"
-            style="@style/top_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/meiwu"
-            android:visibility="gone"/>
-
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="7dp"
-            android:padding="13dp"
-            android:src="@drawable/search"
-            android:visibility="gone"/>
-
-    </RelativeLayout>
+<include layout="@layout/layout_top_search"/>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -19,6 +19,14 @@
             android:drawableLeft="@drawable/back_arrow_white"
             android:drawablePadding="3dp"
             android:text="@string/app_back" />
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
 
         <TextView
             android:id="@+id/title"
@@ -30,7 +38,6 @@
 
         <ImageButton
             android:id="@+id/more_image"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

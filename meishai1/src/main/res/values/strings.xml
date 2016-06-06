@@ -207,6 +207,9 @@
     <string name="tip_choose_wang">必须选择旺旺</string>
     <string name="tip_input_wang">必须输入旺旺</string>
 
+    <string name="message">消息</string>
+    <string name="home">主页</string>
+
     <!-- 我的 -->
     <string name="user_my">我的</string>
     <string name="user_info">个人信息</string>

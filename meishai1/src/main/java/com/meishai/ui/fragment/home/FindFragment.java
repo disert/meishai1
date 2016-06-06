@@ -13,18 +13,14 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.meishai.R;
+import com.meishai.app.widget.EditTextWithDel;
 import com.meishai.dao.MeiShaiSP;
 import com.meishai.entiy.HomeFindRespData;
-import com.meishai.entiy.HomeInfo;
 import com.meishai.entiy.UserInfo;
 import com.meishai.net.ReqData;
-import com.meishai.net.volley.Response.ErrorListener;
-import com.meishai.net.volley.Response.Listener;
-import com.meishai.net.volley.VolleyError;
-import com.meishai.net.volley.toolbox.StringRequest;
 import com.meishai.ui.base.BaseFragment;
 import com.meishai.ui.fragment.home.adapter.HomeFindAdapter;
-import com.meishai.ui.fragment.home.adapter.HomeListAdapter;
+import com.meishai.ui.fragment.meiwu.SearchActivity;
 import com.meishai.util.AndroidUtil;
 import com.meishai.util.CacheConfigUtils;
 import com.meishai.util.DebugLog;
@@ -62,6 +58,7 @@ public class FindFragment extends BaseFragment {
     private String userid;
     private boolean isLoading = false;
     private String url;
+    private EditTextWithDel mSearch;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,7 +70,7 @@ public class FindFragment extends BaseFragment {
                     false);
             initView(mRootView);
             mListView.setVisibility(View.INVISIBLE);
-            // getRequestData(1);
+             getRequestData(1);
         }
 
 
@@ -81,6 +78,15 @@ public class FindFragment extends BaseFragment {
     }
 
     private void initView(View v) {
+        v.findViewById(R.id.lay_top).setVisibility(View.VISIBLE);
+        mSearch = (EditTextWithDel) v.findViewById(R.id.search_et);
+        mSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(SearchActivity.newIntent(SearchActivity.TYPE_MEIWU));
+            }
+        });
+
         mListView = (PullToRefreshListView) v
                 .findViewById(R.id.home_timeline_listview);
         mListView.setMode(Mode.PULL_FROM_START);

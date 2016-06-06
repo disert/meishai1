@@ -39,7 +39,6 @@ import com.meishai.ui.fragment.camera.ChooseImageActivity;
 import com.meishai.ui.fragment.common.req.PublicReq;
 import com.meishai.ui.fragment.usercenter.LoginActivity;
 import com.meishai.ui.tab.FindTab;
-import com.meishai.ui.tab.MessageTab;
 import com.meishai.ui.tab.PhotoShowTab;
 import com.meishai.ui.tab.UseFullTab;
 import com.meishai.ui.tab.UserCenterTab;
@@ -55,48 +54,45 @@ import java.util.Map;
 
 import cn.sharesdk.framework.ShareSDK;
 
-public class MainActivity extends BaseFragmentActivity {
+public class MainActivity_6_5 extends BaseFragmentActivity {
+
+
+    private TextView mTvHome, mTvFind, mTvTry, mTvUser;
     public ImageView mTvCamer;
     private final String TAG_HOME = "home";
     private final String TAG_FIND = "find";
     private final String TAG_TRY = "try";
     private final String TAG_USER = "user";
-    private final String TAG_MESSAGE = "message";
 
     private final int ID_HOME = 0;
     private final int ID_FIND = 1;
     private final int ID_TRY = 2;
     private final int ID_USER = 3;
-    private final int ID_MESSAGE = 4;
 
     private Fragment mHome = new PhotoShowTab();
     private Fragment mFind = new FindTab();
     private Fragment mTry = new UseFullTab();
     private Fragment mUser = new UserCenterTab();
-    private Fragment mMessage = new MessageTab();
 
     private UpgradeDialog upgradeDialog = null;
+
     private CompleteReceiver completeReceiver = null;
 
-
-    private TextView mTvHome, mTvFind, mTvTry, mTvUser,mTvMessage;
-
     private ImageView mIvFind;
+
     private ImageView mIvTry;
-    private ImageView mIvMessage;
+
     private ImageView mIvUser;
-    private ImageView mIvHome;
 
-    private LinearLayout mLlHome;
     private LinearLayout mLlFind;
-    private LinearLayout mLlTry;
-    private LinearLayout mLlUser;
-    private LinearLayout mLlMessage;
 
+    private LinearLayout mLlTry;
+
+    private LinearLayout mLlUser;
     private int currentTag = -1;
 
     public static Intent newIntent(SplashData splashData) {
-        Intent intent = new Intent(GlobalContext.getInstance(), MainActivity.class);
+        Intent intent = new Intent(GlobalContext.getInstance(), MainActivity_6_5.class);
         intent.putExtra("splashData", splashData);
         return intent;
     }
@@ -105,7 +101,7 @@ public class MainActivity extends BaseFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.main_6_5);
+        setContentView(R.layout.main);
         ShareSDK.initSDK(this);
         //加载启动图
         startService(new Intent(this, LoadSplashService.class));
@@ -152,24 +148,20 @@ public class MainActivity extends BaseFragmentActivity {
 
 
     private void initView() {
-        mTvCamer = (ImageView) findViewById(R.id.tab_camer_tv);
-
         mTvHome = (TextView) findViewById(R.id.tab_home_tv);
         mTvFind = (TextView) findViewById(R.id.tab_find_tv);
+        mTvCamer = (ImageView) findViewById(R.id.tab_camer_tv);
         mTvTry = (TextView) findViewById(R.id.tab_try_tv);
-        mTvMessage = (TextView) findViewById(R.id.tab_message_tv);
         mTvUser = (TextView) findViewById(R.id.tab_user_tv);
 
         mIvHome = (ImageView) findViewById(R.id.tab_home_icon);
         mIvFind = (ImageView) findViewById(R.id.tab_find_icon);
         mIvTry = (ImageView) findViewById(R.id.tab_try_icon);
-        mIvMessage = (ImageView) findViewById(R.id.tab_message_icon);
         mIvUser = (ImageView) findViewById(R.id.tab_user_icon);
 
         mLlHome = (LinearLayout) findViewById(R.id.tab_home_container);
         mLlFind = (LinearLayout) findViewById(R.id.tab_find_container);
         mLlTry = (LinearLayout) findViewById(R.id.tab_try_container);
-        mLlMessage = (LinearLayout) findViewById(R.id.tab_message_container);
         mLlUser = (LinearLayout) findViewById(R.id.tab_user_container);
     }
 
@@ -192,18 +184,20 @@ public class MainActivity extends BaseFragmentActivity {
                     }
                 });
 
+        findViewById(R.id.tab_camer_tv).setOnClickListener(
+                new OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        showCamer();
+                    }
+                });
+
         mLlTry.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 showTry();
-            }
-        });
-        mLlMessage.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                showMessage();
             }
         });
 
@@ -224,13 +218,10 @@ public class MainActivity extends BaseFragmentActivity {
         mTvFind.setSelected(false);
         mIvFind.setSelected(false);
 
-        //        mTvCamer.setSelected(false);
+        mTvCamer.setSelected(false);
 
         mTvTry.setSelected(false);
         mIvTry.setSelected(false);
-
-        mTvMessage.setSelected(false);
-        mIvMessage.setSelected(false);
 
         mTvUser.setSelected(false);
         mIvUser.setSelected(false);
@@ -245,13 +236,10 @@ public class MainActivity extends BaseFragmentActivity {
         mTvFind.setSelected(true);
         mIvFind.setSelected(true);
 
-        //        mTvCamer.setSelected(false);
+        mTvCamer.setSelected(false);
 
         mTvTry.setSelected(false);
         mIvTry.setSelected(false);
-
-        mTvMessage.setSelected(false);
-        mIvMessage.setSelected(false);
 
         mTvUser.setSelected(false);
         mIvUser.setSelected(false);
@@ -260,6 +248,19 @@ public class MainActivity extends BaseFragmentActivity {
     }
 
     private void showCamer() {
+        mTvHome.setSelected(false);
+        mIvHome.setSelected(false);
+
+        mTvFind.setSelected(false);
+        mIvFind.setSelected(false);
+
+        mTvCamer.setSelected(true);
+
+        mTvTry.setSelected(false);
+        mIvTry.setSelected(false);
+
+        mTvUser.setSelected(false);
+        mIvUser.setSelected(false);
 
         if (MeiShaiSP.getInstance().getUserInfo().isLogin()) {
             startActivity(ChooseImageActivity.newIntent(new ReleaseData(), ConstantSet.MAX_IMAGE_COUNT));
@@ -276,36 +277,15 @@ public class MainActivity extends BaseFragmentActivity {
         mTvFind.setSelected(false);
         mIvFind.setSelected(false);
 
-        //        mTvCamer.setSelected(false);
+        mTvCamer.setSelected(false);
 
         mTvTry.setSelected(true);
         mIvTry.setSelected(true);
-
-        mTvMessage.setSelected(false);
-        mIvMessage.setSelected(false);
 
         mTvUser.setSelected(false);
         mIvUser.setSelected(false);
 
         switchFragment(ID_TRY);
-    }
-    private void showMessage() {
-        mTvHome.setSelected(false);
-        mIvHome.setSelected(false);
-
-        mTvFind.setSelected(false);
-        mIvFind.setSelected(false);
-
-        mTvTry.setSelected(false);
-        mIvTry.setSelected(false);
-
-        mTvMessage.setSelected(true);
-        mIvMessage.setSelected(true);
-
-        mTvUser.setSelected(false);
-        mIvUser.setSelected(false);
-
-        switchFragment(ID_MESSAGE);
     }
 
     private void showUser() {
@@ -318,11 +298,10 @@ public class MainActivity extends BaseFragmentActivity {
             mTvFind.setSelected(false);
             mIvFind.setSelected(false);
 
+            mTvCamer.setSelected(false);
+
             mTvTry.setSelected(false);
             mIvTry.setSelected(false);
-
-            mTvMessage.setSelected(false);
-            mIvMessage.setSelected(false);
 
             mTvUser.setSelected(true);
             mIvUser.setSelected(true);
@@ -357,10 +336,6 @@ public class MainActivity extends BaseFragmentActivity {
                 if (null != frg) {
                     transaction.hide(frg);
                 }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_MESSAGE);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
 
                 frg = getSupportFragmentManager().findFragmentByTag(TAG_USER);
                 if (null != frg) {
@@ -385,10 +360,7 @@ public class MainActivity extends BaseFragmentActivity {
                 if (null != frg) {
                     transaction.hide(frg);
                 }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_MESSAGE);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
+
                 frg = getSupportFragmentManager().findFragmentByTag(TAG_USER);
                 if (null != frg) {
                     transaction.hide(frg);
@@ -411,10 +383,7 @@ public class MainActivity extends BaseFragmentActivity {
                 if (null != frg) {
                     transaction.hide(frg);
                 }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_MESSAGE);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
+
                 frg = getSupportFragmentManager().findFragmentByTag(TAG_USER);
                 if (null != frg) {
                     transaction.hide(frg);
@@ -437,36 +406,7 @@ public class MainActivity extends BaseFragmentActivity {
                 if (null != frg) {
                     transaction.hide(frg);
                 }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_MESSAGE);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_FIND);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
 
-                break;
-            case ID_MESSAGE:
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_MESSAGE);
-                if (null == frg) {
-                    transaction.add(R.id.realtabcontent, mMessage, TAG_MESSAGE);
-                } else {
-                    transaction.show(frg);
-                }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_HOME);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
-
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_TRY);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
-                frg = getSupportFragmentManager().findFragmentByTag(TAG_USER);
-                if (null != frg) {
-                    transaction.hide(frg);
-                }
                 frg = getSupportFragmentManager().findFragmentByTag(TAG_FIND);
                 if (null != frg) {
                     transaction.hide(frg);
@@ -519,7 +459,9 @@ public class MainActivity extends BaseFragmentActivity {
 
     private long mExitTime;
 
+    private ImageView mIvHome;
 
+    private LinearLayout mLlHome;
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
