@@ -1,6 +1,6 @@
 package com.meishai.ui.tab;
 
-import com.meishai.ui.fragment.meiwu.MeiWuFragment1;
+import com.meishai.ui.fragment.message.MessageFragment;
 
 
 public class MessageTab extends ChildMainFragment {
@@ -8,6 +8,7 @@ public class MessageTab extends ChildMainFragment {
     @Override
     protected void onInitFragment() {
         super.onInitFragment();
-        initFragment(MeiWuFragment1.class);
+        initFragment(MessageFragment.class);
+//        initFragment(MeiWuFragment1.class);
     }
 }

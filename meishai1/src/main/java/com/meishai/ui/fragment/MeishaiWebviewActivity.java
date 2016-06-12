@@ -17,16 +17,9 @@ import android.widget.TextView;
 import com.meishai.GlobalContext;
 import com.meishai.R;
 import com.meishai.app.widget.CustomProgress;
-import com.meishai.dao.MeiShaiSP;
-import com.meishai.entiy.UserInfo;
 import com.meishai.ui.base.BaseActivity;
 import com.meishai.ui.constant.ConstantSet;
 import com.meishai.ui.dialog.ShareInviteDialog;
-import com.meishai.ui.fragment.home.HomePageActivity;
-import com.meishai.ui.fragment.tryuse.FuliSheDetailActivity1;
-import com.meishai.ui.fragment.usercenter.LoginActivity;
-import com.meishai.util.AndroidUtil;
-import com.meishai.util.Constant;
 import com.meishai.util.DebugLog;
 import com.meishai.util.WebViewCtrlUtils;
 
@@ -152,33 +145,34 @@ public class MeishaiWebviewActivity extends BaseActivity {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-                    if (url.startsWith(ConstantSet.MEISHAI_HOME_PAGE)) {//个人主页
-                        String[] split = url.split("/");
-                        String userid = split[split.length - 1];
-                        startActivity(HomePageActivity.newIntent(userid));
-                        return true;
-                    } else if (url.startsWith(ConstantSet.MEISHAI_POINT_GOODS)) {//积分商城详情
-                        String[] split = url.split("/");
-                        String gid = split[split.length - 1];
-                        startActivity(FuliSheDetailActivity1.newIntent(Integer.parseInt(gid), 0));
-                        return true;
-                    } else if (url.startsWith(ConstantSet.MEISHAI_QIANG_GOODS)) {//疯抢详情页面
-                        String[] split = url.split("/");
-                        String gid = split[split.length - 1];
-                        startActivity(FuliSheDetailActivity1.newIntent(Integer.parseInt(gid), 0));
-                        return true;
-                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.TAOBAO_APP)) {//淘宝的链接,有些会默认的跳转到天猫的客户端,有够坑的,我直接给拦截了
-                        return true;
-                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.MEISHAI_LOGIN)) {//登陆的链接
-                        UserInfo userInfo = MeiShaiSP.getInstance().getUserInfo();
-                        if (!userInfo.isLogin()) {
-                            startActivity(LoginActivity.newIntent());
-                            return true;
-                        }
-                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.MEISHAI_SELL_GOODS)) {//商品销售
-                        startActivity(LoginActivity.newIntent());
-                        return true;
-                    } else if (url.startsWith(ConstantSet.MEISHAI_SHARE_FRIEND)) {//邀请好友的链接
+//                    if (url.startsWith(ConstantSet.MEISHAI_HOME_PAGE)) {//个人主页
+//                        String[] split = url.split("/");
+//                        String userid = split[split.length - 1];
+//                        startActivity(HomePageActivity.newIntent(userid));
+//                        return true;
+//                    } else if (url.startsWith(ConstantSet.MEISHAI_POINT_GOODS)) {//积分商城详情
+//                        String[] split = url.split("/");
+//                        String gid = split[split.length - 1];
+//                        startActivity(FuliSheDetailActivity1.newIntent(Integer.parseInt(gid), 0));
+//                        return true;
+//                    } else if (url.startsWith(ConstantSet.MEISHAI_QIANG_GOODS)) {//疯抢详情页面
+//                        String[] split = url.split("/");
+//                        String gid = split[split.length - 1];
+//                        startActivity(FuliSheDetailActivity1.newIntent(Integer.parseInt(gid), 0));
+//                        return true;
+//                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.TAOBAO_APP)) {//淘宝的链接,有些会默认的跳转到天猫的客户端,有够坑的,我直接给拦截了
+//                        return true;
+//                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.MEISHAI_LOGIN)) {//登陆的链接
+//                        UserInfo userInfo = MeiShaiSP.getInstance().getUserInfo();
+//                        if (!userInfo.isLogin()) {
+//                            startActivity(LoginActivity.newIntent());
+//                            return true;
+//                        }
+//                    } else if (url.startsWith(ConstantSet.TMALL_APP) || url.startsWith(ConstantSet.MEISHAI_SELL_GOODS)) {//商品销售
+//                        startActivity(LoginActivity.newIntent());
+//                        return true;
+//                    } else
+                    if (url.startsWith(ConstantSet.MEISHAI_SHARE_FRIEND)) {//邀请好友的链接
                         if (mSharePop == null) {
                             mSharePop = new ShareInviteDialog(MeishaiWebviewActivity.this);
                         }
@@ -187,9 +181,9 @@ public class MeishaiWebviewActivity extends BaseActivity {
                         return true;
 
                     }
-//                    if(!WebViewCtrlUtils.ctrl(MeishaiWebviewActivity.this,url)) {
-//                        view.loadUrl(url);
-//                    }
+                    if(!WebViewCtrlUtils.ctrl(MeishaiWebviewActivity.this, url)) {
+                        view.loadUrl(url);
+                    }
                     return true;
 
                 }

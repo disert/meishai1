@@ -16,7 +16,6 @@ import com.meishai.R;
  * @date 2015-3-1 下午03:06:24
  */
 public class ConstantSet {
-
     public static final int MAX_IMAGE_COUNT = 6;//最大上传图片的数量
     public static final int MAX_TAGS_COUNT = 5;//最大选择的标签的数量
     public static int SCREEN_WIDTH = 0; // 屏幕宽度
@@ -111,7 +110,9 @@ public class ConstantSet {
     public static final String MEISHAI_QIANG_GOODS = "http://www.meishai.com/goods/qiang/";//美晒疯抢详情
     public static final String MEISHAI_SHARE_FRIEND = "http://www.meishai.com/invite/";//邀请好友
     public static final String MEISHAI_LOGIN = "http://www.meishai.com/login";//美晒登陆
-    public static final String MEISHAI_SELL_GOODS = "http://www.meishai.com/goods/item/";//商品销售
+
+    public static final String MEISHAI_SELL_GOODS = "http://www.meishai.com/goods/";//商品销售
+    public static final String MEISHAI_DOUBLE_SELL = "http://www.meishai.com/mall/group";//团购页面
 
 
     public static final String TMALL_APP = "tmall://";//天猫app

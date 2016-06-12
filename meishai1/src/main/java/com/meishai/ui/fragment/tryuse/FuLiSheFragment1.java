@@ -1,18 +1,9 @@
 package com.meishai.ui.fragment.tryuse;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +11,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.meishai.R;
@@ -29,12 +19,8 @@ import com.meishai.entiy.H5Data;
 import com.meishai.net.volley.Response;
 import com.meishai.net.volley.VolleyError;
 import com.meishai.ui.base.BaseFragment;
-import com.meishai.ui.constant.ConstantSet;
 import com.meishai.ui.dialog.ShareInviteDialog;
-import com.meishai.ui.fragment.MeishaiWebviewActivity;
 import com.meishai.ui.fragment.common.req.PublicReq;
-import com.meishai.ui.fragment.home.HomePageActivity;
-import com.meishai.ui.sliding.PagerSlidingTabStrip;
 import com.meishai.util.AndroidUtil;
 import com.meishai.util.DebugLog;
 import com.meishai.util.WebViewCtrlUtils;
@@ -69,7 +55,7 @@ public class FuLiSheFragment1 extends BaseFragment {
     private void loadUrl() {
         H5Data data = new H5Data();
         data.action = "index";
-        data.controller = "goods";
+        data.controller = "mall";
         PublicReq.h5Requst(data, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

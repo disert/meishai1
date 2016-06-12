@@ -1,8 +1,5 @@
 package com.meishai.ui.tab;
 
-import com.meishai.ui.fragment.meiwu.WebViewFragment;
-import com.meishai.ui.fragment.tryuse.FreeTrialFragment;
-import com.meishai.ui.fragment.tryuse.FuLiSheFragment;
 import com.meishai.ui.fragment.tryuse.FuLiSheFragment1;
 
 public class UseFullTab extends ChildMainFragment {
@@ -10,8 +7,8 @@ public class UseFullTab extends ChildMainFragment {
     @Override
     protected void onInitFragment() {
         super.onInitFragment();
-        initFragment(FreeTrialFragment.class);
-//		initFragment(FuLiSheFragment1.class);
+//        initFragment(FreeTrialFragment.class);
+		initFragment(FuLiSheFragment1.class);
     }
 
     @Override

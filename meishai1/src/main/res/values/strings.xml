@@ -341,4 +341,12 @@
     <string name="wait_for_download_picture">等待图片下载……</string>
     <string name="picture_cant_download_or_sd_cant_read">图片下载失败或是SD卡无法读取</string>
 
+
+    <string name="new_fans">新的粉丝</string>
+    <string name="new_comm">新的评论</string>
+    <string name="new_zan">新的赞</string>
+    <string name="new_collect">新的收藏</string>
+    <string name="new_notify">通知</string>
+
+
 </resources>
