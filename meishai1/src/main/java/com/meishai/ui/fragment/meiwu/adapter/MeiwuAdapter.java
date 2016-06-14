@@ -32,6 +32,15 @@ public abstract class MeiwuAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public int getPage(){
+        return 0;
+    }
+    public String getTitle(){
+        return "";
+    }
+    public boolean hasPage(){
+        return false;
+    }
 
     protected abstract void initData(String data);
 }

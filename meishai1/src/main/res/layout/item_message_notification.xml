@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/lay_comment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_lay_selector"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.meishai.app.widget.CircleImageView
+            android:id="@+id/message_noti_avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="8dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="8dip"
+            android:padding="5dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/lay_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/message_noti_avatar"
+            android:layout_toRightOf="@id/message_noti_avatar"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/message_noti_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="美晒天使"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/message_noti_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:singleLine="true"
+                android:text="评论"
+                android:textColor="#cccccc"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/message_noti_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lay_name_title"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@id/message_noti_avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="1天前发表"
+            android:textColor="#cccccc"
+            android:textSize="9sp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/message_noti_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="8dip"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <com.emoji.FaceTextView
+            android:id="@+id/message_noti_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:text="content"
+            android:textColor="#666666"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/message_noti_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                style="@style/view_hor_match_line"
+                android:layout_margin="5dp"/>
+
+            <com.emoji.FaceTextView
+                android:id="@+id/message_noti_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:text="content"
+                android:textColor="#cccccc"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/top_line"
+        style="@style/view_hor_match_line"
+        android:layout_alignParentBottom="true"/>
+
+</LinearLayout>

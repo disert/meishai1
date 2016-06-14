@@ -581,6 +581,7 @@
         <activity android:name=".ui.fragment.home.DaysTopicActivity" android:launchMode="singleTop"/>
         <activity android:name=".ui.fragment.tryuse.DoubleSellWebviewActivity" android:launchMode="singleTop"/>
         <activity android:name=".ui.fragment.tryuse.SellGoodsWebviewActivity" android:launchMode="singleTop"/>
+        <activity android:name=".ui.fragment.message.ListActivity" android:launchMode="singleTop"/>
 
         <service android:name="com.meishai.service.ReleaseService">
         </service>

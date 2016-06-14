@@ -11,6 +11,9 @@ import com.meishai.app.widget.layout.MessageItemView;
 import com.meishai.entiy.MessageRespBean;
 import com.meishai.net.volley.toolbox.ImageLoader;
 import com.meishai.net.volley.toolbox.ListImageListener;
+import com.meishai.ui.fragment.home.TopicShowActivity;
+import com.meishai.ui.fragment.message.ListActivity;
+import com.meishai.util.SkipUtils;
 
 /**
  * 主界面 精选fragment对应的适配器 2.0
@@ -100,23 +103,53 @@ public class MessageAdapter extends BaseAdapter {
                 switch (position){
                     case 0:
                         convertView = initMessage(convertView,R.drawable.icon_new_fans,mContext.getString(R.string.new_fans),mData.getFans_num());
+                        convertView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mContext.startActivity(ListActivity.newIntent(ListActivity.TYPE_FANS));
+                            }
+                        });
                         break;
                     case 1:
                         convertView = initMessage(convertView,R.drawable.icon_new_comm,mContext.getString(R.string.new_comm),mData.getCom_num());
+                        convertView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mContext.startActivity(ListActivity.newIntent(ListActivity.TYPE_COM));
+                            }
+                        });
                         break;
                     case 2:
                         convertView = initMessage(convertView,R.drawable.icon_new_zan,mContext.getString(R.string.new_zan),mData.getZan_num());
+                        convertView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mContext.startActivity(ListActivity.newIntent(ListActivity.TYPE_ZAN));
+                            }
+                        });
                         break;
                     case 3:
                         convertView = initMessage(convertView,R.drawable.icon_new_collect,mContext.getString(R.string.new_collect),mData.getFav_num());
+                        convertView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mContext.startActivity(ListActivity.newIntent(ListActivity.TYPE_FAV));
+                            }
+                        });
                         break;
                     case 4:
                         convertView = initMessage(convertView,R.drawable.icon_new_notice,mContext.getString(R.string.new_notify),mData.getNotice_num());
+                        convertView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mContext.startActivity(ListActivity.newIntent(ListActivity.TYPE_NOTI));
+                            }
+                        });
                         break;
                 }
                 break;
             case TYPE_ITEM:
-                MessageRespBean.ListBean bean = (MessageRespBean.ListBean) item;
+                final MessageRespBean.ListBean bean = (MessageRespBean.ListBean) item;
                 MessageCommItemView itemView;
                 if(convertView == null){
                     itemView = new MessageCommItemView(mContext);
@@ -141,6 +174,23 @@ public class MessageAdapter extends BaseAdapter {
                 itemView.mTitle.setText(bean.getTitle());
                 itemView.mBrowseNum.setText(bean.getView_num()+"");
                 itemView.mLikeNum.setText(bean.getFollow_num()+"");
+
+                convertView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //tempid=0 跳转到晒晒分类页 tempid=1、tempid=2 跟之前的美物一样
+                       switch (bean.getTempid()){
+                           case 0:
+                               mContext.startActivity(TopicShowActivity.newIntent(bean.getTid()));
+                               break;
+                           case 1:
+                           case 2:
+                               SkipUtils.skipMeiwu(mContext,bean.getTempid(),bean.getTid());
+                               break;
+                       }
+                    }
+                });
+                break;
 
             default:
                 break;
