@@ -1,6 +1,6 @@
 package com.meishai.ui.fragment.tryuse;
 
-import android.content.Context;
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.meishai.R;
 import com.meishai.app.widget.CustomProgress;
 import com.meishai.entiy.H5Data;
+import com.meishai.h5interface.JavaScriptObject;
 import com.meishai.net.volley.Response;
 import com.meishai.net.volley.VolleyError;
 import com.meishai.ui.base.BaseFragment;
@@ -32,9 +33,13 @@ import org.json.JSONObject;
  * 福利社主界面 2.0
  *
  * @author yl
+ *
+ * 支付方式:`
+ * 1 微信
+ * 2 支付宝
  */
 public class FuLiSheFragment1 extends BaseFragment {
-    private Context mContext;
+    private Activity mContext;
     private String title = "";
     private TextView tvTitle;
     private WebView webview;
@@ -116,6 +121,7 @@ public class FuLiSheFragment1 extends BaseFragment {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
                     if (!WebViewCtrlUtils.ctrl(mContext, url)) {
+                        view.addJavascriptInterface(new JavaScriptObject(mContext), "apppay");
                         view.loadUrl(url);
                     }
                     return true;
@@ -157,6 +163,8 @@ public class FuLiSheFragment1 extends BaseFragment {
                 }
 
             });
+            //注入对象
+            webview.addJavascriptInterface(new JavaScriptObject(mContext), "apppay");
             webview.loadUrl(url);
         }
     }

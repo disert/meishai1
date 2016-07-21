@@ -23,10 +23,14 @@ public class ConstantSet {
     public static final String APP_SIGN = "Meishai";
     public static final String TIME_PATTERN = "yyyy-MM-dd HH:mm";
     public static final String APP_ID_QQ = "1104295927";// qq第三方登录的appid
-    public static final String APP_ID_WX = "wx6e03e62c61953966";// 微信第三方登录的appid
+    public static final String APP_ID_WX = "wx7111d615b4c4cd88";// 微信第三方登录的appid
+    public static final String MCH_ID_WX = "1254565001";// 微信支付商户号
+    public static final String MCH_KEY_WX = "H7uusi8e8ioHiuL989JSiSIOKLU7r58J";// 微信支付商户秘钥
+    public static final String CALL_BACK_WX = "http://www.meishai.com/weixin_notify_url.php";// 微信支付回调页面
     // 其他变量
     public static final String ACTION_WEIXIN_LOGIN = "weixin login";
     public static final String EXTRA_OPENAPI_AUTH_RESPONSE = "token";
+
     /**
      * 新浪微博第三方登录
      */
@@ -134,6 +138,8 @@ public class ConstantSet {
     public static final String ACTION_PIC_FIRST = "ACTION_PIC_FIRST";
     //发布晒晒的完成的广播
     public static final String ACTION_RELEASE = "ACTION_RELEASE";
-
     public static LruCache<String, Bitmap> MEMORY_CACHE;
+
+
+
 }

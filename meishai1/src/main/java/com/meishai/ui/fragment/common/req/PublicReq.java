@@ -1,8 +1,5 @@
 package com.meishai.ui.fragment.common.req;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 
 import com.meishai.GlobalContext;
@@ -15,12 +12,16 @@ import com.meishai.net.ReqData;
 import com.meishai.net.RespData;
 import com.meishai.net.VolleyHelper;
 import com.meishai.net.volley.Request;
+import com.meishai.net.volley.Response;
 import com.meishai.net.volley.Response.ErrorListener;
 import com.meishai.net.volley.Response.Listener;
 import com.meishai.net.volley.toolbox.StringRequest;
 import com.meishai.ui.fragment.usercenter.LoginActivity;
 import com.meishai.util.DebugLog;
 import com.nimbusds.jose.JOSEException;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 公用请求
@@ -384,6 +385,12 @@ public class PublicReq {
         } catch (JOSEException e) {
             e.printStackTrace();
         }
+    }
+    public static void pay(Context context,String orderno, Response.Listener<String> listener, Response.ErrorListener errorListener) {
+        String url = "http://www.meishai.com/app2.php?c=mall&a=pay&orderno="+orderno+"&userid=1";
+        VolleyHelper.getRequestQueue(context).add(
+                new StringRequest(Request.Method.POST, url, listener,
+                        errorListener));
     }
 
 }

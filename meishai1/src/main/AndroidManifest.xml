@@ -583,6 +583,13 @@
         <activity android:name=".ui.fragment.tryuse.SellGoodsWebviewActivity" android:launchMode="singleTop"/>
         <activity android:name=".ui.fragment.message.ListActivity" android:launchMode="singleTop"/>
 
+
+        <!-- 微信支付回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
         <service android:name="com.meishai.service.ReleaseService">
         </service>
         <service android:name=".service.LoadSplashService"/>
